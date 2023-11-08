@@ -1,0 +1,93 @@
+#top-img {
+  height: 650px;
+  width: 100%;
+}
+.head-txt {
+  position: absolute;
+}
+.top {
+  position: relative;
+  /* text-align: center; */
+}
+.top-txt {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 30px;
+  font-weight: bold;
+}
+.sub-txt {
+  position: absolute;
+  top: 55%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 21px;
+  /* font-weight: bold; */
+}
+.horizontal-list {
+  position: absolute;
+  top: 68%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 21px;
+  /* font-weight: bold; */
+}
+
+.horizontal-list {
+  list-style-type: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-list li {
+  display: inline-block; /* Display list items side by side */
+  margin-right: 20px;
+}
+
+.horizontal-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.hover-underline {
+  text-decoration: none; /* Remove the default underline from links */
+  color: black; /* Optional: style for link color */
+}
+
+.hover-underline:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+.horizontal li {
+  display: inline-block; /* Display list items side by side */
+  margin-right: 20px;
+}
+.horizontal li a {
+  /* text-decoration: ; */
+  color: rgb(49, 106, 191);
+  text-align: center;
+}
+.horizontal {
+  font-size: 21px;
+  /* 
+  font-weight: bold; */
+}
+#section-two {
+  margin-top: 60px;
+}
+#section-two {
+  margin-top: 60px;
+}
+#txt {
+  font-size: 40px;
+  margin-left: 40px;
+  margin-top: 90px;
+}
+#sub-txt {
+  font-size: 35px;
+  margin-left: 40px;
+  margin-top: 60px;
+}
