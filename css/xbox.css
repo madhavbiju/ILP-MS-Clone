@@ -57,7 +57,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: green;
+  color: #107b10;
 }
 
 .ql-item:hover {
@@ -68,27 +68,36 @@
   height: 50%;
 }
 
-.content-container {
-  padding: 10px;
-  height: 120vh;
-  display: flex;
-  border: 2px solid red;
-  flex-flow: column wrap;
+.content-container,
+.content-container2,
+.content-container3 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 250px;
+  width: 100%;
+}
+
+.content-container a,
+.content-container2 a,
+.content-container3 a {
+  margin-top: 5px;
+  color: white;
+  font-size: large;
 }
 
 .bcontainer {
-  padding: 5px;
-  height: 60%;
-  width: 50%;
-  border: 2px solid blue;
+  grid-row: span 2;
   position: relative;
+  padding: 1px;
+}
+
+.bcontainer h2 {
+  font-size: xx-large;
 }
 
 .scontainer {
-  padding: 5px;
-  height: 300px;
-  width: 50%;
-
+  color: white;
+  padding: 1px;
   display: flex;
 }
 
@@ -97,13 +106,8 @@
   width: 50%;
 }
 
-.scontainer-left img {
-  height: 100%;
-  width: 100%;
-}
-
 .scontainer-right {
-  background-color: green;
+  background-color: #107b10;
   color: white;
   height: 100%;
   width: 50%;
@@ -113,23 +117,26 @@
   justify-content: center;
 }
 
-.bcontainer-bg {
+.bcontainer-bg,
+.wcontainer-bg {
   height: 100%;
   width: 100%;
 }
 
-.bcontainer-bg img {
+.bcontainer-bg img,
+.wcontainer-bg img,
+.scontainer-left img {
   height: 100%;
   width: 100%;
 }
 
 .bcontainer-fg {
+  background-image: linear-gradient(to top, black 0%, transparent 100%);
   width: 100%;
   height: 100%;
   position: absolute;
   color: white;
   top: 0;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -137,8 +144,21 @@
   padding-left: 30px;
 }
 
-/* .wcontainer {
+.wcontainer {
+  padding: 2px;
+  grid-column: span 2;
+  position: relative;
+}
+
+.wcontainer-fg {
+  background-image: linear-gradient(to right, black 0%, transparent 100%);
   width: 100%;
-  height: 50%;
-  border: 2px solid yellow;
-} */
+  height: 100%;
+  position: absolute;
+  color: white;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+}
