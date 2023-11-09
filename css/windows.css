@@ -1,0 +1,165 @@
+#openingImage {
+  width: 1100px;
+  margin-left: 400px;
+  height: 700px;
+  margin-left: 70px;
+}
+.title-content {
+  position: absolute;
+  top: 170px;
+  left: 120px;
+  font-size: 40px;
+  color: rgb(63, 62, 62);
+}
+.container--a-- {
+  position: relative;
+}
+.blue_line {
+  width: 50px;
+  height: 5px;
+  background-image: linear-gradient(
+    rgb(0, 55, 255),
+    rgb(0, 157, 255),
+    rgb(0, 238, 255)
+  );
+  position: absolute;
+  top: 150px;
+  left: 120px;
+}
+.title_description {
+  position: absolute;
+  top: 370px;
+  left: 120px;
+  color: rgb(130, 129, 129);
+}
+button {
+  background-color: #3f7ff6; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* top: 530px; */
+  left: 140px;
+  border-radius: 10px;
+  position: absolute;
+}
+#p1 {
+  font-size: 60px;
+  color: black;
+  font-weight: 600;
+  margin-left: 300px;
+}
+#p2 {
+  text-align: center;
+  margin-left: 390px;
+  font-size: 20px;
+}
+.container--b {
+  margin-top: 90px;
+}
+.image-container-b {
+  margin-top: 50px;
+  display: flex;
+  width: 800px;
+  width: 100%;
+}
+.link {
+  color: rgb(5, 75, 166);
+  font-weight: 500;
+}
+.image-container-b1 {
+  text-align: center;
+}
+.image-container-b2 {
+  text-align: center;
+}
+.image-container-b3 {
+  text-align: left;
+}
+.img-b {
+  width: 400px;
+  padding: 10px;
+  margin-right: 10px;
+  /* width: 400px; */
+}
+.container--c {
+  display: flex;
+  margin-top: 60px;
+}
+.container--c-image {
+  flex: 1;
+}
+.container--c-content {
+  margin-top: 20px;
+  padding: 40px;
+  flex: 1;
+  margin-left: 65px;
+}
+.img-c {
+  margin-left: 65px;
+  width: 500px;
+  border-radius: 7px;
+}
+#p4 {
+  font-size: 40px;
+  color: black;
+  font-weight: 700;
+}
+.blue_linec {
+  width: 50px;
+  height: 5px;
+  background-image: linear-gradient(
+    rgb(0, 55, 255),
+    rgb(0, 157, 255),
+    rgb(0, 238, 255)
+  );
+}
+.but {
+  margin-left: 600px;
+  background-color: #3f7ff6; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+
+  font-size: 16px;
+
+  border-radius: 10px;
+}
+.vid-d {
+  margin-left: 40px;
+  width: 500px;
+  margin-right: 60px;
+  border-radius: 7px;
+}
+.getWindowsButton {
+  top: 530px;
+}
+.exploreButton {
+  left: 100px;
+}
+.learnMore {
+  left: 667px;
+}
+.helpMeChoose {
+  left: 500px;
+  align-self: center;
+}
+#p5 {
+  font-size: 60px;
+  color: black;
+  font-weight: 600;
+  margin-left: 370px;
+}
+#p6 {
+  text-align: center;
+  margin-left: 230px;
+  font-size: 20px;
+}
+.container--e {
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
