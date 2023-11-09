@@ -4,7 +4,7 @@ const quotableApiUrl = "https://api.quotable.io/quotes?limit=3";
 
 let imageUrls = []; // Store photo URLs in an array
 let quoteSlides = []; // Store quotes in an array
-
+let authorSlides = [];
 // Fetch data from the Pexels API and create image slides
 const fetchPexelsData = async () => {
   try {
@@ -30,6 +30,7 @@ const fetchQuotableData = async () => {
     const data = await response.json();
     data.results.forEach((quote) => {
       quoteSlides.push(quote.content); // Store the quote in the array
+      authorSlides.push(quote.author);
     });
   } catch (error) {
     console.error("Error fetching data from Quotable API:", error);
@@ -50,16 +51,23 @@ const fetchData = async () => {
     slidesContainer.classList.add("slides-container");
     const quoteSlide = document.createElement("div");
     quoteSlide.classList.add("overlay");
+    const overlayContent = document.createElement("div");
+    overlayContent.classList.add("overlay-content");
 
     const img = document.createElement("img");
     img.classList.add("slides");
+    const author = document.createElement("h2");
     const overlay = document.createElement("p");
-    overlay.classList.add("overlay-content");
+    const aElement = document.createElement("a");
+    aElement.textContent = "Get it Now >";
+    aElement.href = "#";
     overlay.textContent = quoteSlides[i];
+    author.textContent = authorSlides[i];
     img.src = imageUrls[i];
-    console.log(img.src);
-
-    quoteSlide.appendChild(overlay);
+    overlayContent.appendChild(author);
+    overlayContent.appendChild(overlay);
+    overlayContent.appendChild(aElement);
+    quoteSlide.appendChild(overlayContent);
     slidesContainer.appendChild(img);
     slidesContainer.appendChild(quoteSlide);
     slideshow.appendChild(slidesContainer);

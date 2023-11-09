@@ -1,4 +1,7 @@
 /* Slide Show */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .slideshow {
   position: relative;
@@ -22,16 +25,25 @@
   height: 100%;
   width: 40%;
   color: white;
-  padding: 10px;
 }
 
 .overlay-content {
+  padding-right: 10px;
+  background-image: linear-gradient(to left, black 0%, transparent 100%);
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+.overlay-content a {
+  font-size: large;
+  color: white;
+}
+
+.overlay-content p {
+  font-size: xx-large;
 }
 
 /* QuickLinks */
@@ -104,6 +116,7 @@
 .scontainer-left {
   height: 100%;
   width: 50%;
+  overflow: hidden;
 }
 
 .scontainer-right {
@@ -119,6 +132,7 @@
 
 .bcontainer-bg,
 .wcontainer-bg {
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
@@ -126,8 +140,16 @@
 .bcontainer-bg img,
 .wcontainer-bg img,
 .scontainer-left img {
+  transition: transform 0.4s;
   height: 100%;
   width: 100%;
+}
+
+.bcontainer-bg:hover img,
+.wcontainer-bg:hover img,
+.scontainer-left:hover img {
+  transform: scale(1.3);
+  transform-origin: 50% 50%;
 }
 
 .bcontainer-fg {
