@@ -1,0 +1,259 @@
+#top-img {
+  height: 650px;
+  width: 100%;
+}
+#first-li {
+  border-left: 2px solid black;
+}
+.head-txt {
+  position: absolute;
+}
+.top {
+  position: relative;
+  /* text-align: center; */
+}
+.top-txt {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 30px;
+  font-weight: bold;
+}
+.sub-txt {
+  position: absolute;
+  top: 55%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 21px;
+  /* font-weight: bold; */
+}
+.horizontal-list {
+  position: absolute;
+  top: 68%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 21px;
+  /* font-weight: bold; */
+}
+
+.horizontal-list {
+  list-style-type: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-list li {
+  display: inline-block; /* Display list items side by side */
+  margin-right: 20px;
+}
+
+.horizontal-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.hover-underline {
+  text-decoration: none; /* Remove the default underline from links */
+  color: black; /* Optional: style for link color */
+}
+
+.hover-underline:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+.horizontal li {
+  display: inline-block; /* Display list items side by side */
+  margin-right: 20px;
+}
+.horizontal a {
+  /* text-decoration: ; */
+  color: rgb(49, 106, 191);
+  text-align: center;
+}
+.horizontal {
+  font-size: 17px;
+  /* 
+  font-weight: bold; */
+}
+#section-two {
+  margin-top: 60px;
+}
+#section-two {
+  margin-top: 60px;
+}
+#txt {
+  font-size: 40px;
+  margin-left: 40px;
+  margin-top: 90px;
+}
+#sub-txt {
+  font-size: 35px;
+  margin-left: 40px;
+  margin-top: 60px;
+}
+
+.container {
+  display: flex;
+  height: 500px;
+}
+.column1 {
+  flex: 1;
+  /* background-color: bisque; */
+  /* height: 400px; */
+  /* border: 1px solid black; */
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
+  /* padding: 20px; */
+  border-radius: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  background-color: #f3f2f3;
+  margin-left: 40px;
+  overflow: hidden;
+}
+.column2 {
+  flex: 1;
+  display: flex;
+  /* background-color: darkcyan; */
+  border-radius: 20px;
+  margin-right: 40px;
+  /* border: 1px solid black; */
+  /* box-shadow: 1px 1px 1px 1px #888888; */
+  flex-direction: column;
+}
+.row1 {
+  overflow: hidden;
+  flex: 1;
+  border-radius: 20px;
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
+}
+.row2 {
+  overflow: hidden;
+  /* flex: 1; */
+  flex: auto;
+  border-radius: 20px;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
+}
+
+video {
+  /* display: block;  */
+  width: 100%; /* make video fill the container */
+  height: 100%; /* maintain aspect ratio */
+  /* additional styles if needed */
+}
+.row1 img {
+  /* width: 100%; */
+  height: 100%;
+}
+#lap-txt {
+  top: 30px;
+  right: 70px;
+  position: absolute;
+}
+.laptop {
+  display: flex;
+  height: 400px;
+  width: 100%;
+}
+.laptop-column1 {
+  /* display: flex;
+  flex: 55%; */
+  border: 1px solid black;
+  
+}
+.laptop-column2 {
+  flex: 45%;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.column1-column1 {
+  flex: 1;
+  /* border: 1px solid black; */
+}
+.column1-column2 {
+  flex: 1;
+  /* border: 1px solid black; */
+}
+.column1-column1 {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+}
+.lap1 {
+  flex: 1;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  margin: 10px;
+}
+.lap2 {
+  flex: 1;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.column1-column2 {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+}
+.lap3 {
+  flex: 1;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+}
+.lap4 {
+  flex: 1;
+  /* border: 1px solid black; */
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+}
+.icon-list {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+}
+.icon-list li {
+  display: inline-block; /* You can also use 'inline', but 'inline-block' is more flexible */
+  margin-right: 60px;
+}
+.icon-list {
+  margin-top: 90px;
+}
+.icon-list img {
+  height: 45px;
+}
+
+.icon-list a {
+  color: rgb(49, 106, 191);
+}
+.section-six {
+  margin-top: 60px;
+  margin-left: 90px;
+}
+.section-six-txt li {
+  display: inline-block;
+}
+.section-six-txt {
+  margin-top: 40px;
+}
+.section-six-subtxt {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.section-six-subtxt li {
+  display: inline-block;
+}
+.laptop-column2 {
+  background-color: #f3f2f3;
+}
