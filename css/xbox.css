@@ -37,9 +37,20 @@ body {
   justify-content: center;
 }
 
+.overlay-content h2 {
+  background-color: yellow;
+  max-width: 180px;
+  text-align: center;
+  color: black;
+}
+
 .overlay-content a {
   font-size: large;
-  color: white;
+  color: #054b16;
+  background-color: #9bf00b;
+  max-width: 120px;
+  text-align: center;
+  font-weight: 800;
 }
 
 .overlay-content p {
