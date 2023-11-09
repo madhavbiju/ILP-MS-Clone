@@ -1,11 +1,12 @@
 const pexelsApiKey = "WMNynpV8PSJVZhHrDiErkhOjr0bBPS0EBVCLBEpO7aGuBJHsntnVSjKX";
-const pexelsApiUrl = "https://api.pexels.com/v1/curated?per_page=3"; // You can adjust the query parameters as needed.
+const pexelsApiUrl = "https://api.pexels.com/v1/curated?per_page=3";
 const quotableApiUrl = "https://api.quotable.io/quotes?limit=3";
 
 let imageUrls = []; // Store photo URLs in an array
 let quoteSlides = []; // Store quotes in an array
-let authorSlides = [];
-// Fetch data from the Pexels API and create image slides
+let authorSlides = []; // Store quote authors in an array
+
+// Fetch data from the Pexels API
 const fetchPexelsData = async () => {
   try {
     const response = await fetch(pexelsApiUrl, {
@@ -42,9 +43,6 @@ const fetchData = async () => {
   await fetchPexelsData();
   await fetchQuotableData();
 
-  // Now you can access imageUrls and quoteSlides arrays
-  console.log("Image URLs:", imageUrls);
-  console.log("Quote Slides:", quoteSlides);
   const slideshow = document.querySelector(".slideshow");
   for (let i = 0; i < imageUrls.length; i++) {
     const slidesContainer = document.createElement("div");
@@ -53,7 +51,6 @@ const fetchData = async () => {
     quoteSlide.classList.add("overlay");
     const overlayContent = document.createElement("div");
     overlayContent.classList.add("overlay-content");
-
     const img = document.createElement("img");
     img.classList.add("slides");
     const author = document.createElement("h2");
@@ -72,6 +69,7 @@ const fetchData = async () => {
     slidesContainer.appendChild(quoteSlide);
     slideshow.appendChild(slidesContainer);
   }
+  // Call the Slider Function
   carousel();
 };
 

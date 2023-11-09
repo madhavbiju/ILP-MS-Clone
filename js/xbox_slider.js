@@ -13,7 +13,7 @@ function carousel() {
   x[slideIndex - 1].style.display = "block";
   setTimeout(carousel, 5000); // Change image every 5 seconds
 
-  // Add code to hide all captions
+  // Code to hide all captions
   var captions = document.getElementsByClassName("overlay");
   for (i = 0; i < captions.length; i++) {
     captions[i].style.display = "none";

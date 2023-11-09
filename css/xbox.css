@@ -1,8 +1,8 @@
-/* Slide Show */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Slide Show */
 .slideshow {
   position: relative;
 }
@@ -58,7 +58,6 @@ body {
 }
 
 /* QuickLinks */
-
 .quicklinks-container {
   width: 100%;
   height: 150px;
@@ -91,6 +90,7 @@ body {
   height: 50%;
 }
 
+/* Content Containers */
 .content-container,
 .content-container2,
 .content-container3 {
@@ -108,6 +108,7 @@ body {
   font-size: large;
 }
 
+/* Child Containers of Varying Sizes Big/Small/Wide */
 .bcontainer {
   grid-row: span 2;
   position: relative;

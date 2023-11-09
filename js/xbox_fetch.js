@@ -5,9 +5,9 @@ const request = fetch(
 request
   .then((response) => response.json())
   .then((data) => {
-    fillContainer1(data);
-    fillContainer2(data);
-    fillContainer3(data);
+    fillContainer1(data); // Call the function to fill up the first section
+    fillContainer2(data); // Call the function to fill up the second section
+    fillContainer3(data); // Call the function to fill up the third section
   })
   .catch((error) => {
     console.error("Error fetching data: ", error);
@@ -23,7 +23,7 @@ function fillContainer1(data) {
     const title = product.title;
     const desc = product.description;
     const imageUrl = product.thumbnail;
-
+    // Check whether the next Div to come is big or not
     const productContainer = document.createElement("div");
     productContainer.classList.add(
       isBigContainer ? "bcontainer" : "scontainer"
@@ -51,12 +51,10 @@ function fillContainer1(data) {
     textContainer.appendChild(titleElement);
     textContainer.appendChild(descElement);
     textContainer.appendChild(aElement);
-
     productContainer.appendChild(imageContainer);
     productContainer.appendChild(textContainer);
     contentContainer.appendChild(productContainer);
-
-    isBigContainer = !isBigContainer;
+    isBigContainer = !isBigContainer; // Alternate between small and big div
   });
 }
 
@@ -70,7 +68,7 @@ function fillContainer2(data) {
     const title = product.title;
     const desc = product.description;
     const imageUrl = product.thumbnail;
-    let isBigContainer = changeBoolean2(index);
+    let isBigContainer = changeBoolean2(index); // Call function which returns the type (small/wide) of div to be made
     const productContainer = document.createElement("div");
     productContainer.classList.add(
       isBigContainer ? "wcontainer" : "scontainer"
@@ -98,18 +96,10 @@ function fillContainer2(data) {
     textContainer.appendChild(titleElement);
     textContainer.appendChild(descElement);
     textContainer.appendChild(aElement);
-
     productContainer.appendChild(imageContainer);
     productContainer.appendChild(textContainer);
     contentContainer.appendChild(productContainer);
   });
-}
-
-function changeBoolean2(index) {
-  let boolArray = [false, false, true, false, false];
-  let result = boolArray[index];
-  index = index + 1;
-  return result;
 }
 
 function fillContainer3(data) {
@@ -121,7 +111,7 @@ function fillContainer3(data) {
     const title = product.title;
     const desc = product.description;
     const imageUrl = product.thumbnail;
-    let isBigContainer = changeBoolean3(index);
+    let isBigContainer = changeBoolean3(index); // Call function which returns the type (small/big) of div to be made
     const productContainer = document.createElement("div");
     productContainer.classList.add(
       isBigContainer ? "bcontainer" : "scontainer"
@@ -146,7 +136,6 @@ function fillContainer3(data) {
     const aElement = document.createElement("a");
     aElement.textContent = "Get it Now >";
     aElement.href = "#";
-
     textContainer.appendChild(titleElement);
     textContainer.appendChild(descElement);
     textContainer.appendChild(aElement);
@@ -154,6 +143,15 @@ function fillContainer3(data) {
     productContainer.appendChild(textContainer);
     contentContainer.appendChild(productContainer);
   });
+}
+
+// Functions which return the div size type
+
+function changeBoolean2(index) {
+  let boolArray = [false, false, true, false, false];
+  let result = boolArray[index];
+  index = index + 1;
+  return result;
 }
 
 function changeBoolean3(index) {
