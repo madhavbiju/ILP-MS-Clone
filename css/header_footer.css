@@ -12,7 +12,15 @@ body {
   line-height: 1.5;
 }
 
-a {
+.links a {
+  color: #262626;
+  text-decoration: none;
+}
+.footer a {
+  color: #262626;
+  text-decoration: none;
+}
+.main-nav a {
   color: #262626;
   text-decoration: none;
 }
