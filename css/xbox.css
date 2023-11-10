@@ -121,7 +121,7 @@ body {
 .bcontainer {
   grid-row: span 2;
   position: relative;
-  padding: 1px;
+  margin: 2px;
 }
 
 .bcontainer h2 {
@@ -130,7 +130,7 @@ body {
 
 .scontainer {
   color: white;
-  padding: 1px;
+  margin: 2px;
   display: flex;
 }
 
@@ -188,7 +188,7 @@ body {
 }
 
 .wcontainer {
-  padding: 2px;
+  margin: 2px;
   grid-column: span 2;
   position: relative;
 }
