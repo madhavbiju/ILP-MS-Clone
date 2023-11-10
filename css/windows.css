@@ -17,7 +17,8 @@
 .blue_line {
   width: 50px;
   height: 5px;
-  background-image: linear-gradient( to right,
+  background-image: linear-gradient(
+    to right,
     rgb(0, 55, 255),
     rgb(0, 157, 255),
     rgb(0, 238, 255)
@@ -60,34 +61,49 @@ button {
 .container--b {
   margin-top: 90px;
 }
-.image-container-b {
-  margin-top: 50px;
+ .container--i {
   display: flex;
-  width: 800px;
+  justify-content: space-around;
+  
+} 
+.image-container-b {
+ 
+  margin-top: 70px;
+  display: flex;
   width: 100%;
+  height: 300px;
+  justify-content: space-around;
 }
+ /* .image-container-i{
+ 
+  margin-top: 50px;
+  flex:1;
+  width: 100%; 
+  height: 300px;
+  
+  border: solid blue;
+}  */
 .link {
   color: rgb(5, 75, 166);
   font-weight: 500;
 }
-.image-container-b1 {
+.image-container-b1,.image-container-i {
+  
   text-align: center;
   width: 380px;
-  height: 218px;
+  height: 120%;
   border-radius: 7px;
 }
-.image-container-b2 {
-  text-align: center;
+.container--h{
+  margin-bottom: 50px;
 }
-.image-container-b3 {
-  text-align: left;
+
+.img-b,.img-i {
+  width: 100%;
+  max-height: 50%;
+  border-radius: 7px; 
 }
-.img-b {
-  width: 400px;
-  padding: 10px;
-  margin-right: 10px;
-  /* width: 400px; */
-}
+
 .container--c {
   display: flex;
   margin-top: 60px;
@@ -114,8 +130,9 @@ button {
 .blue_linec {
   width: 50px;
   height: 5px;
-  background-image: linear-gradient( to right,
-    rgb(0, 55, 255),
+  background-image: linear-gradient(
+    to right,
+    rgb(43, 86, 240),
     rgb(0, 157, 255),
     rgb(0, 238, 255)
   );
@@ -166,35 +183,35 @@ button {
   margin-top: 90px;
   margin-bottom: 100px;
 }
-.container--f{
+.container--images {
   display: flex;
-}
-.container--f-right{
-  flex: 1;
-}
-.container--f-left{
-  flex: 1;
+  justify-content: space-around;
   
 }
-.container--f-right-top{
+.container--images-right {
+  flex: 1;
+}
+.container--f-left {
+  flex: 1;
+}
+.container--images-right-top {
   display: flex;
+  padding: auto;
 }
-.container--f-right-top1{
+.container--images-right-top1 {
+  padding: auto;
   flex: 1;
 }
-.container--f-right-top2{
-  flex: 1;
-}
-.container--g-top{
+
+.container--g-top {
   background-image: linear-gradient(rgb(137, 185, 208));
   display: flex;
   margin-top: 70px;
-  
 }
-.container--g-image{
+.container--g-image {
   flex: 1;
 }
-.container--g-content{
+.container--g-content {
   flex: 1;
   margin-top: 20px;
   padding: 40px;
@@ -206,24 +223,52 @@ button {
   margin-right: 30px;
   /* width: 400px; */
 }
-.container--f-right{
-flex: 40%;
-margin-right: 110px;
-padding: 40px;
+.container--images-right {
+  flex: 40%;
+  padding: auto;
+  
+  
 }
-.container--f-left{
-flex:60%;
-top: 70px;
-margin-left: 80px;
-padding: 40px;
+.container--f-left {
+  flex: 1;
+  /* top: 70px; */
+  margin-left: 100px;
+  padding: 10px;
+  height: 380px;
+  width: 450px;
+  margin-top:30px;
 }
-.container--f{
-display: flex;
-margin-top: 90px;
-margin-bottom: 60px;
-background-color:rgb(53, 195, 220);
-background-image: linear-gradient(to bottom, rgb(119, 188, 244), rgb(183, 218, 235),white);
+.container--f {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(115, 201, 244),
+    rgb(173, 216, 243),
+    rgb(241, 241, 241)
+  );
+  padding: 40px;
+ 
 }
-hr{
-  color: rgb(72, 71, 71);
+hr {
+  
+  height: 2px;
+  background-color: rgb(123, 121, 121);
+}
+.container-gradient{
+  background-image: linear-gradient(
+    to bottom,
+    rgb(195, 227, 243),
+    rgb(228, 238, 244),
+    rgb(230, 237, 240)
+  );
+  padding: 30px;
+  margin-top: 40px;
+  
+}
+#search-bar{
+  height: 290px;
+  width: 270px;
+  margin-top: 40px;
 }
