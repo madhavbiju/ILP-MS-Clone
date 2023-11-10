@@ -2,6 +2,14 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.main-nav .logo2 {
+  width: 110px;
+  margin-left: 20px;
+  padding: 7px;
+  padding-left: 15px;
+  border-left: 1px solid black;
+}
+
 /* Slide Show */
 .slideshow {
   position: relative;
@@ -113,7 +121,7 @@ body {
 .bcontainer {
   grid-row: span 2;
   position: relative;
-  padding: 1px;
+  margin: 2px;
 }
 
 .bcontainer h2 {
@@ -122,7 +130,7 @@ body {
 
 .scontainer {
   color: white;
-  padding: 1px;
+  margin: 2px;
   display: flex;
 }
 
@@ -180,7 +188,7 @@ body {
 }
 
 .wcontainer {
-  padding: 2px;
+  margin: 2px;
   grid-column: span 2;
   position: relative;
 }
