@@ -13,11 +13,11 @@ request
     console.error("Error fetching data: ", error);
   });
 
+// Function which fills up the first Section
 function fillContainer1(data) {
   const productsArray = data.products;
   const contentContainer = document.querySelector(".content-container");
   let isBigContainer = true;
-
   productsArray.slice(0, 4).forEach((product, index) => {
     const brand = product.brand;
     const title = product.title;
@@ -26,20 +26,18 @@ function fillContainer1(data) {
     // Check whether the next Div to come is big or not
     const productContainer = document.createElement("div");
     productContainer.classList.add(
-      isBigContainer ? "bcontainer" : "scontainer"
+      isBigContainer ? "bigContainer" : "smallContainer"
     );
-
     const imageContainer = document.createElement("div");
     imageContainer.classList.add(
-      isBigContainer ? "bcontainer-bg" : "scontainer-left"
+      isBigContainer ? "bigContainer-bg" : "smallContainer-left"
     );
     const image = document.createElement("img");
     image.src = imageUrl;
     imageContainer.appendChild(image);
-
     const textContainer = document.createElement("div");
     textContainer.classList.add(
-      isBigContainer ? "bcontainer-fg" : "scontainer-right"
+      isBigContainer ? "bigContainer-fg" : "smallContainer-right"
     );
     const titleElement = document.createElement("h2");
     titleElement.textContent = `${title}`;
@@ -58,6 +56,7 @@ function fillContainer1(data) {
   });
 }
 
+// Function which fills up the second Section
 function fillContainer2(data) {
   const productsArray = data.products;
   const contentContainer = document.querySelector(".content-container2");
@@ -68,23 +67,21 @@ function fillContainer2(data) {
     const title = product.title;
     const desc = product.description;
     const imageUrl = product.thumbnail;
-    let isBigContainer = changeBoolean2(index); // Call function which returns the type (small/wide) of div to be made
+    let isWideContainer = changeBoolean2(index); // Call function which returns the type (small/wide) of div to be made
     const productContainer = document.createElement("div");
     productContainer.classList.add(
-      isBigContainer ? "wcontainer" : "scontainer"
+      isWideContainer ? "wideContainer" : "smallContainer"
     );
-
     const imageContainer = document.createElement("div");
     imageContainer.classList.add(
-      isBigContainer ? "wcontainer-bg" : "scontainer-left"
+      isWideContainer ? "wideContainer-bg" : "smallContainer-left"
     );
     const image = document.createElement("img");
     image.src = imageUrl;
     imageContainer.appendChild(image);
-
     const textContainer = document.createElement("div");
     textContainer.classList.add(
-      isBigContainer ? "wcontainer-fg" : "scontainer-right"
+      isWideContainer ? "wideContainer-fg" : "smallContainer-right"
     );
     const titleElement = document.createElement("h2");
     titleElement.textContent = `${title}`;
@@ -102,6 +99,7 @@ function fillContainer2(data) {
   });
 }
 
+// Function which fills up the third Section
 function fillContainer3(data) {
   const productsArray = data.products;
   const contentContainer = document.querySelector(".content-container3");
@@ -114,20 +112,18 @@ function fillContainer3(data) {
     let isBigContainer = changeBoolean3(index); // Call function which returns the type (small/big) of div to be made
     const productContainer = document.createElement("div");
     productContainer.classList.add(
-      isBigContainer ? "bcontainer" : "scontainer"
+      isBigContainer ? "bigContainer" : "smallContainer"
     );
-
     const imageContainer = document.createElement("div");
     imageContainer.classList.add(
-      isBigContainer ? "bcontainer-bg" : "scontainer-left"
+      isBigContainer ? "bigContainer-bg" : "smallContainer-left"
     );
     const image = document.createElement("img");
     image.src = imageUrl;
     imageContainer.appendChild(image);
-
     const textContainer = document.createElement("div");
     textContainer.classList.add(
-      isBigContainer ? "bcontainer-fg" : "scontainer-right"
+      isBigContainer ? "bigContainer-fg" : "smallContainer-right"
     );
     const titleElement = document.createElement("h2");
     titleElement.textContent = `${title}`;
@@ -146,7 +142,6 @@ function fillContainer3(data) {
 }
 
 // Functions which return the div size type
-
 function changeBoolean2(index) {
   let boolArray = [false, false, true, false, false];
   let result = boolArray[index];
@@ -160,39 +155,3 @@ function changeBoolean3(index) {
   index = index + 1;
   return result;
 }
-
-//FETCH APIs for Navigation bar
-async function asyncFunc() {
-  try {
-    // USING TRY CATCH
-    const response = await fetch("https://dummyjson.com/products");
-    const data = await response.json();
-    const productsArray = data.products;
-    console.log(productsArray);
-
-    var container = document.querySelector(".dropdown-content"); // Assuming 'sectionMain' is the container you mentioned
-    var divItem = document.createElement("div");
-    divItem.className = "row";
-    for (let i = 0, j = 3; i < 18, j < 21; i += 3, j += 3) {
-      var productDetails = document.createElement("div");
-      productDetails.className = "column";
-      var productDetailsItem = document.createElement("h3");
-      productDetailsItem.textContent = productsArray[i].category;
-      productDetails.appendChild(productDetailsItem);
-      productsArray.slice(i, j).forEach((products) => {
-        var productLink = document.createElement("a");
-        productLink.href = "#";
-        productLink.textContent = products.title;
-
-        productDetails.appendChild(productLink);
-        divItem.appendChild(productDetails);
-        container.appendChild(divItem);
-      });
-    }
-  } catch (error) {
-    console.error("Error fetching data: ", error);
-  }
-}
-
-asyncFunc();
-// END OF API CALL FOR NAVIGATION BAR
