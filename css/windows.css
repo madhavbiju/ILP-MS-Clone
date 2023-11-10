@@ -18,7 +18,10 @@
   width: 50px;
   height: 5px;
   background-image: linear-gradient(
+<<<<<<< HEAD
     to right,
+=======
+>>>>>>> 4c424f886dc0eb1827b7b53356c074afa8827510
     rgb(0, 55, 255),
     rgb(0, 157, 255),
     rgb(0, 238, 255)
@@ -61,6 +64,7 @@ button {
 .container--b {
   margin-top: 90px;
 }
+<<<<<<< HEAD
  .container--i {
   display: flex;
   justify-content: space-around;
@@ -83,10 +87,19 @@ button {
   
   border: solid blue;
 }  */
+=======
+.image-container-b {
+  margin-top: 50px;
+  display: flex;
+  width: 800px;
+  width: 100%;
+}
+>>>>>>> 4c424f886dc0eb1827b7b53356c074afa8827510
 .link {
   color: rgb(5, 75, 166);
   font-weight: 500;
 }
+<<<<<<< HEAD
 .image-container-b1,.image-container-i {
   
   text-align: center;
@@ -104,6 +117,23 @@ button {
   border-radius: 7px; 
 }
 
+=======
+.image-container-b1 {
+  text-align: center;
+}
+.image-container-b2 {
+  text-align: center;
+}
+.image-container-b3 {
+  text-align: left;
+}
+.img-b {
+  width: 400px;
+  padding: 10px;
+  margin-right: 10px;
+  /* width: 400px; */
+}
+>>>>>>> 4c424f886dc0eb1827b7b53356c074afa8827510
 .container--c {
   display: flex;
   margin-top: 60px;
@@ -131,8 +161,12 @@ button {
   width: 50px;
   height: 5px;
   background-image: linear-gradient(
+<<<<<<< HEAD
     to right,
     rgb(43, 86, 240),
+=======
+    rgb(0, 55, 255),
+>>>>>>> 4c424f886dc0eb1827b7b53356c074afa8827510
     rgb(0, 157, 255),
     rgb(0, 238, 255)
   );
@@ -183,6 +217,7 @@ button {
   margin-top: 90px;
   margin-bottom: 100px;
 }
+<<<<<<< HEAD
 .container--images {
   display: flex;
   justify-content: space-around;
@@ -272,3 +307,5 @@ hr {
   width: 270px;
   margin-top: 40px;
 }
+=======
+>>>>>>> 4c424f886dc0eb1827b7b53356c074afa8827510
