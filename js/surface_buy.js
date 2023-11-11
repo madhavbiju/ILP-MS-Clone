@@ -32,6 +32,9 @@ fetch(apiURL)
     console.error(error.message);
   });
 
+
+
+  //js for navigation
 async function asyncFunc() {
   try {
     // USING TRY CATCH
