@@ -116,6 +116,9 @@
   margin-left: 40px;
   overflow: hidden;
 }
+.column2 img {
+  width: 100%;
+}
 .column2 {
   flex: 1;
   display: flex;
