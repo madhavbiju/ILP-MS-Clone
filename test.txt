@@ -1,0 +1,18 @@
+ // var container = document.querySelector(".dropdown-content"); // Assuming 'sectionMain' is the container you mentioned
+    // var divItem = document.createElement("div");
+    // divItem.className = "row";
+    // for (let i = 0, j = 3; i < 18, j < 21; i += 3, j += 3) {
+    //   var productDetails = document.createElement("div");
+    //   productDetails.className = "column";
+    //   var productDetailsItem = document.createElement("h3");
+    //   productDetailsItem.textContent = productsArray[i].category;
+    //   productDetails.appendChild(productDetailsItem);
+    //   productsArray.slice(i, j).forEach((products) => {
+    //     var productLink = document.createElement("a");
+    //     productLink.href = "#";
+    //     productLink.textContent = products.title;
+
+    //     productDetails.appendChild(productLink);
+    //     divItem.appendChild(productDetails);
+    //     container.appendChild(divItem);
+    // });
