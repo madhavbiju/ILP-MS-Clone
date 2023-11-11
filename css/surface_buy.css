@@ -1,0 +1,82 @@
+.top {
+  position: relative;
+  /* text-align: center; */
+}
+#top-img {
+  height: 450px;
+  width: 100%;
+}
+.top-txt {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 30px;
+  font-weight: bold;
+}
+.sub-txt {
+  position: absolute;
+  top: 70%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  font-size: 21px;
+  /* font-weight: bold; */
+}
+#first-li {
+  border-left: 2px solid black;
+}
+
+.container {
+  margin-top: 40px;
+  display: grid;
+  grid-auto-columns: calc(30% - 4rem);
+  grid-auto-flow: column;
+  /* grid-gap: 16px; */
+  overflow-x: auto;
+}
+
+.container img {
+  width: 90%;
+  height: 250px;
+}
+.container h3 {
+  text-align: center;
+}
+
+.icon-list {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+}
+.icon-list li {
+  display: inline-block; /* You can also use 'inline', but 'inline-block' is more flexible */
+  margin-right: 60px;
+}
+.icon-list {
+  margin-top: 90px;
+}
+.icon-list img {
+  height: 45px;
+}
+
+.icon-list a {
+  color: rgb(49, 106, 191);
+}
+.section-six {
+  margin-top: 60px;
+  margin-left: 90px;
+}
+.section-six-txt li {
+  display: inline-block;
+}
+.section-six-txt {
+  margin-top: 40px;
+}
+.section-six-subtxt {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.section-six-subtxt li {
+  display: inline-block;
+}
