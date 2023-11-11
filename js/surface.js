@@ -27,6 +27,10 @@ fetch(apiURL)
     console.error(error.message);
   });
 
+
+
+
+  
 fetch(apiURL)
   .then((response) => {
     if (response.ok) {
