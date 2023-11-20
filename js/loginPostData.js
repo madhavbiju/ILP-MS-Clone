@@ -8,12 +8,16 @@ function login() {
     /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   if (email == "") {
     alert("Please enter Email ID.");
+    return;
   } else if (password == "") {
     alert("Enter the Password");
+    return;
   } else if (!filter.test(email)) {
     alert("Enter valid email id.");
+    return;
   } else if (password.length < 6) {
     alert("Password should have minimum length of 6.");
+    return;
   }
 
   // Simulate sending the data to a server for authentication
