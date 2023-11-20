@@ -19,36 +19,42 @@ function showSlides() {
 // ENDING OF SLIDESHOW
 // BEGINNING OF API CALL FOR PRODUCTS
 
-// async function gadgets() {
-//   try {
-//     // USING TRY CATCH
-//     const response = await fetch("https://api.escuelajs.co/api/v1/products");
-//     const data = await response.json();
-//     var container = document.querySelector(".products");
-//     var divItem = document.createElement("div");
-//     divItem.className = "products-items";
-//     for (let i = 0; i < 4; i++) {
-//       var products = document.createElement("div");
-//       products.className = "products-items-list";
-//       var productImage = document.createElement("img");
-//       productImage = data[i].images[0];
-//       var productTitle = document.createElement("h1");
-//       productTitle = data[i].title;
-//       var productInfo = document.createElement("p");
-//       productInfo = data[i].description;
-//       var productLink = document.createElement("a");
-//       productLink = "Learn More >";
-//       divItem.appendChild(products);
-//       divItem.appendChild(productImage);
-//       divItem.appendChild(productTitle);
-//       divItem.appendChild(productInfo);
-//       divItem.appendChild(productLink);
-//     }
-//     container.appendChild(divItem);
-//   } catch (error) {
-//     console.error("Error fetching data: ", error);
-//   }
-// }
+async function gadgets() {
+  try {
+    // USING TRY CATCH
+    const response = await fetch(
+      "https://api.slingacademy.com/v1/sample-data/photos"
+    );
+    const data = await response.json();
+    const productsArray = data.photos;
+    console.log(productsArray);
+    var container = document.querySelector(".products");
+    var divItem = document.createElement("div");
+    divItem.className = "products-items";
+    console.log(data[0]);
+    for (let i = 0; i < 4; i++) {
+      var products = document.createElement("div");
+      products.className = "products-items-list";
+      var productImage = document.createElement("img");
+      productImage.src = productsArray[i].url;
+      var productTitle = document.createElement("h1");
+      productTitle.textContent = productsArray[i].title;
+      var productInfo = document.createElement("p");
+      productInfo.textContent = productsArray[i].description;
+      var productLink = document.createElement("a");
+      productLink.textContent = "Learn More >";
 
-// gadgets();
+      products.appendChild(productImage);
+      products.appendChild(productTitle);
+      products.appendChild(productInfo);
+      products.appendChild(productLink);
+      divItem.appendChild(products);
+    }
+    container.appendChild(divItem);
+  } catch (error) {
+    console.error("Error fetching data: ", error);
+  }
+}
+
+gadgets();
 // END OF API CALL FOR PRODUCTS

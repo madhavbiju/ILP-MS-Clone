@@ -230,15 +230,16 @@
 .ai-list {
   width: 85%;
 }
-.ai-list img {
+.ai .ai-list img {
+  position: relative;
   width: 100%;
 }
-.ai-list-text {
+.ai .ai-list-text {
   position: absolute;
-  top: 1525px;
+  top: 1600px;
   left: 180px;
 }
-.ai-list-text button {
+.ai .ai-list .ai-list-text button {
   border: none;
   padding: 10px;
   background-color: #0067b8;
