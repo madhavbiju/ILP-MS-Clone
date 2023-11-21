@@ -19,5 +19,5 @@ function carousel() {
     captions[i].style.display = "none";
   }
   // Display the caption for the current slide
-  captions[slideIndex - 1].style.display = "block";
+  captions[slideIndex - 1].style.display = "flex";
 }
