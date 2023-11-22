@@ -18,52 +18,26 @@
       </div>
       <!-- Login box -->
       <div class="login">
-        <table cellspacing="2" align="center" cellpadding="8" border="0">
-          <tr>
-            <td>Enter Email ID :</td>
-            <td>
-              <input
-                type="text"
-                placeholder="Enter Email ID Here"
-                id="email"
-                class="tb"
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>Enter Password :</td>
-            <td>
-              <input
-                type="password"
-                placeholder="Enter Password here"
-                id="pwd1"
-                class="tb"
-              />
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <input
-                type="submit"
-                value="Login"
-                class="btn"
-                onClick="login()"
-              />
-              <input
-                type="submit"
-                value="Reset"
-                onclick="clearFunc()"
-                class="btn"
-              />
-            </td>
-          </tr>
-        </table>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="text" id="email" name="email-id" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="pwd1" name="password" required />
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Login" onclick="login()" />
+          </div>
+          <div class="form-group">
+            <input type="reset" value="Reset" onclick="clearFunc()" />
+          </div>
+        </form>
       </div>
       <!-- login box div ending here.. -->
     </div>
     <!-- Main div ending here... -->
   </body>
   <script src="js/login.js"></script>
-  <script src="js/loginPostData.js"></script>
 </html>
