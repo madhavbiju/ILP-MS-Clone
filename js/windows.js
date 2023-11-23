@@ -75,8 +75,45 @@ request
     
 
     });
+    //--------------
 
-    //--------
+   
+      // const product = data.products[8]; // Select the first product
+      // const contentContainerc = document.querySelector(".container--c");
+
+      // const titleElement = document.createElement("div");
+      // titleElement.classList.add("title");
+      // titleElement.textContent = `${product.title}`;
+
+      // const imagecontainerc = document.createElement("div");
+      // imagecontainerc.classList.add("image-container-c");
+      
+      // const image = document.createElement("img");
+      // image.classList.add("img-c");
+      // image.src = product.thumbnail;
+
+      // const descriptionContainer = document.createElement("div");
+      // descriptionContainer.classList.add("description-container");
+
+      // const gradientLine = document.createElement("div");
+      // gradientLine.classList.add("gradient-line");
+
+      // const descElement = document.createElement("p");
+      // descElement.classList.add("description");
+      // descElement.textContent = `${product.description}`;
+
+      // const learnMoreButton = document.createElement("button");
+      // learnMoreButton.classList.add("learn-more-button");
+      // learnMoreButton.textContent = "Learn More";
+
+      // imagecontainerc.appendChild(image);
+      // descriptionContainer.appendChild(gradientLine);
+      // descriptionContainer.appendChild(titleElement);
+      // descriptionContainer.appendChild(descElement);
+      // descriptionContainer.appendChild(learnMoreButton);
+      // contentContainerc.appendChild(imagecontainerc);
+      // contentContainerc.appendChild(descriptionContainer);
+    
   })
 
   
