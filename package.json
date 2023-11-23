@@ -12,5 +12,6 @@
     "google-auth-library": "^9.2.0",
     "googleapis": "^128.0.0"
   },
+  "devDependencies": {},
   "description": ""
 }
