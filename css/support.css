@@ -21,13 +21,6 @@ ul {
   list-style: none;
 }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* Nav */
 .main-nav {
   display: flex;
   align-items: center;
@@ -35,6 +28,8 @@ ul {
   height: 60px;
   padding: 20px 0;
   font-size: 13px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .main-nav .logo {
@@ -95,12 +90,12 @@ ul {
   color: #333;
 }
 
-/* Links */
 .links {
   background: #f2f2f2;
   color: #616161;
   font-size: 12px;
   padding: 35px 0;
+  margin-top: 50px;
 }
 
 .links-inner {
@@ -118,7 +113,6 @@ ul {
   line-height: 2.8;
 }
 
-/* Footer */
 .footer {
   background: #f2f2f2;
   color: #616161;
@@ -159,11 +153,14 @@ ul {
   margin-bottom: 20px;
 }
 .main-container-header {
-  max-width: 1200px;
-  height: 250px;
+  max-width: 1300px;
+  height: 280px;
   color: white;
   background-image: url(https://support.content.office.net/en-us/media/76bb3497-baf7-4f68-ac15-0da34f0caf56.png);
   text-align: center;
+}
+#search-icon {
+  margin-top: 7px;
 }
 h1 {
   padding-top: 20px;
@@ -196,18 +193,16 @@ input {
   padding-bottom: 22px;
 }
 .main-container-input {
-  /* position: relative; */
   position: relative;
   display: flex;
   align-items: center;
-  height: 60px; /* Adjusted height */
+  height: 60px;
   margin-left: 250px;
   margin-right: 150px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 .main-container-button {
   color: white;
-  background-color: #4b72ce;
+  background-color: #346ec8;
   border: 1px solid white;
   padding: 6px 6px;
   font-size: 16px;
@@ -218,31 +213,31 @@ input {
   margin-bottom: 10px;
 }
 .main-container-button:hover {
-  background-color: #4b72ce;
+  background-color: #346ec8;
   color: white;
   text-decoration: underline;
 }
 
 #search-input {
-  padding: 8px; /* Adjusted padding */
-  width: calc(100% - 50px); /* Adjusted width to accommodate the button */
+  padding: 8px;
+  width: calc(100% - 50px);
   border: none;
   justify-content: center;
-  font-size: 14px; /* Adjusted font size */
+  font-size: 14px;
   padding-bottom: 15px;
   padding-top: 15px;
 }
 
 #search-button {
   position: relative;
-  z-index: 1; /* Ensure the button is above the input */
-  margin-left: -30px; /* Negative margin to overlap with the input */
-  padding: 5px; /* Adjusted padding */
+  z-index: 1;
+  margin-left: -30px;
+  padding: 5px;
   background-color: white;
   color: #0078d4;
   border: none;
   cursor: pointer;
-  font-size: 18px; /* Adjusted font size */
+  font-size: 18px;
 }
 .signin-container {
   display: flex;
@@ -258,13 +253,15 @@ input {
   background-color: #f2f2f2;
 }
 .list-container {
-  padding-left: 10px;
+  padding-left: 13px;
   padding-right: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   background-color: #f2f2f2;
-  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 a:hover {
   text-decoration: underline;
@@ -276,7 +273,7 @@ a:hover {
 }
 .topics {
   display: flex;
-  padding-left: 20px;
+  padding-left: 10px;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -288,7 +285,6 @@ h1 {
   text-align: center;
 }
 .main-topics-container {
-  padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -297,36 +293,34 @@ h1 {
 }
 #more-products {
   color: #115ba9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 #more-products:hover {
   text-decoration: underline;
 }
+
 .container-topics {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+#product-names {
+  padding-top: 20px;
 }
 .main-topics {
   padding-top: 20px;
   padding-bottom: 20px;
   padding: 30px;
 }
-.copilot-container {
-  padding-top: 20px;
-  background-color: #f2f2f2;
-  display: flex;
-  padding-bottom: 20px;
-  padding-right: 20px;
-}
+
 .trial-container {
   background-color: #f2f2f2;
   display: flex;
   padding-bottom: 20px;
 }
-.copilot-images {
-  width: 500px;
-  padding-top: 20px;
-  border-radius: 10px;
-}
+
 p {
   padding-left: 15px;
   padding-top: 20px;
@@ -337,12 +331,7 @@ h1 {
   padding-left: 15px;
   text-align: left;
 }
-#more-products {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  padding-left: 15px;
-  padding-top: 15px;
-}
+
 h2 {
   padding-left: 15px;
   padding-bottom: 0%;
@@ -353,6 +342,7 @@ h2 {
 }
 .explore-items {
   padding-left: 20px;
+  margin-left: 20px;
   display: flex;
 }
 #explore {
@@ -366,6 +356,7 @@ h2 {
 .explore-minicontainer {
   flex: 1;
   padding-bottom: 20px;
+  margin-left: 50px;
 }
 #main-heading {
   text-align: center;
@@ -373,13 +364,19 @@ h2 {
 .success-container {
   background-color: #f2f2f2;
   display: flex;
-  padding-bottom: 20px;
+}
+.success-details {
+  margin-left: 80px;
 }
 .video-container {
   padding: 30px;
+  margin-left: 60px;
 }
 h3 {
   padding-left: 30px;
+}
+#footer-heading {
+  padding-left: 0%;
 }
 .trial-button {
   padding-top: 20px;
@@ -395,4 +392,50 @@ h3 {
 }
 .trial-button:hover {
   text-decoration: underline;
+}
+
+.main-menu {
+  background-color: #fff;
+}
+
+.copilot-container {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  height: 400px;
+}
+
+.copilot-image img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-left: 150px;
+  width: 500px;
+  height: 300px;
+}
+
+.copilot-link {
+  text-transform: uppercase;
+  color: #115ba9;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.copilot-link:hover {
+  text-decoration: underline;
+}
+
+.copilot-link:after {
+  content: " >";
+  position: absolute;
+  left: 100%;
+  margin-left: 5px;
+}
+.copilot-details {
+  margin-left: 80px;
+  margin-bottom: 30px;
+}
+.row-container {
+  margin-left: 30px;
 }
