@@ -1,4 +1,4 @@
-const apiURL = "https://dummyjson.com/products";
+const apiURL = "https://mocki.io/v1/127687cc-b980-4670-927e-240eda106f2c";
 fetch(apiURL)
   .then((response) => {
     if (response.ok) {
@@ -27,10 +27,6 @@ fetch(apiURL)
     console.error(error.message);
   });
 
-
-
-
-  
 fetch(apiURL)
   .then((response) => {
     if (response.ok) {
