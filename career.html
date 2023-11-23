@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/career.css" />
+    <title>Career Form</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+          <img
+            src="https://i.ibb.co/wwLhz98/logo.png"
+            alt="Microsoft Logo"
+            class="logo"
+          />
+          <h2>CAREERS</h2>
+          <form method="post" action="" name="career-form">
+            <div class="form-group">
+              <label for="Name">Your Name:</label>
+              <input
+                type="text"
+                id="Name"
+                name="Name"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="Email">Your Email:</label>
+              <input
+                type="email"
+                id="Email"
+                name="Email"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="Career">Choose a Career:</label>
+              <select id="Career" name="Career" class="form-control">
+                <option value="software_engineer">Software Engineer</option>
+                <option value="data_scientist">Data Scientist</option>
+                <option value="product_manager">Product Manager</option>
+                <option value="software Developer">Software Developer</option>
+                <option value="Database Architect">Database Architect</option>
+                <option value="Systems Operator">Systems Operator</option>
+              </select>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+
+          <div id="output"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/career.js"></script>
+  </body>
+</html>

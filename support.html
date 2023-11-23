@@ -25,7 +25,7 @@
           <ul class="right-menu">
             <li>
               <a href="#">
-               <img src="assets/search_Icon.png" width="20px" height="20px">
+               <img id="search-icon" src="assets/search_Icon.png" width="20px" height="20px">
               </a>
             </li>
             <li>
@@ -42,7 +42,7 @@
           <h1 id="main-heading">Welcome to Microsoft Support</h1>
           <div class="signin-container">
           <p>Please sign in so we may serve you better</p>
-          <button class="main-container-button">Sign in</button></div>
+          <button class="main-container-button" onclick="window.location.href='login.html'">Sign in</button></div>
          <div class="main-container-input">
           <input type="text" id="search-input" placeholder="How can we help you?">
           <button id="search-button">&#8594;</button>
@@ -60,35 +60,35 @@
               </li>
               <li class="list-container">
                 <img class="products-images" src="assets/outlook.png" alt="">
-                <h5><a href="https://support.microsoft.com/en-us/outlook">Outlook</a></h5>
+                <h5><a id="product-names" href="">Outlook</a></h5>
               </li>
               <li class="list-container">
                 <img class="products-images" src="assets/onedrive.png" alt="">
-                <h5><a href="https://support.microsoft.com/en-us/onedrive">OneDrive</a></h5>
+                <h5><a id="product-names"  href="">OneDrive</a></h5>
               </li>
               <li class="list-container">
                 <img class="products-images" src="assets/window.png" alt="">
-                <h5><a href="https://support.microsoft.com/en-us/windows">Windows</a></h5>
+                <h5><a id="product-names"  href="">Windows</a></h5>
               </li>
               <li class="list-container">
                 <img class="products-images" src="assets/surfacedrive.png" alt="">
-                <h5><a href="https://support.microsoft.com/en-us/surface">Surface devices</a></h5>
+                <h5><a id="product-names" href="">Surface devices</a></h5>
               </li>
               <li class="list-container">
                 <img class="products-images" src="assets/Gaming.png" alt="">
-                <h5><a href="https://support.xbox.com/">Gaming</a></h5>
+                <h5><a id="product-names" href="">Gaming</a></h5>
               </li>
               <li class="list-container">
                 <img class="products-images" src="assets/teams.png" alt="">
-                <h5><a href="https://support.microsoft.com/en-us/teams">Microsoft Teams</a></h5>
+                <h5><a id="product-names" href="">Microsoft Teams</a></h5>
               </li>
               <li class="list-container">
                 <img class="products-images" src="assets/store.png" alt="">
-                <h5><a href="https://support.microsoft.com/en-us/microsoft-store-and-billing">Microsoft Store</a></h5>
+                <h5><a id="product-names" href="">Microsoft Store</a></h5>
               </li>
               <li class="list-container">
                 <img class="products-images" src="assets/edge.png" alt="">
-                <h5><a href="https://support.microsoft.com/en-us/microsoft-edge">Microsoft Edge</a></h5>
+                <h5><a id="product-names" href="">Microsoft Edge</a></h5>
               </li>
             </ul>
             <a id="more-products" href="https://support.microsoft.com/en-us/all-products">MORE MICROSOFT PRODUCTS ></a>
@@ -101,35 +101,35 @@
             <div class="main-topics-container">
             <h3>Microsoft 365</h3>
             <ul class="main-topics">
-              <li><a id="sub-topics" href="https://support.microsoft.com/en-us/office/download-and-install-or-reinstall-microsoft-365-or-office-2021-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658">Install Microsoft 365</a></li>
-              <li><a id="sub-topics" href="https://support.microsoft.com/en-us/account-billing/manage-a-microsoft-subscription-7f52444a-8612-4f29-b109-2ac47dd4c83a">Manage your subscriptions</a></li>
-              <li><a id="sub-topics"href="https://support.microsoft.com/en-us/office/payment-billing-e899cd8a-c9a2-4a4e-9440-7c8ff1adda2c">Manage Payment and Billing</a></li>
+              <li><a id="sub-topics" href="">Install Microsoft 365</a></li>
+              <li><a id="sub-topics" href="">Manage your subscriptions</a></li>
+              <li><a id="sub-topics"href="">Manage Payment and Billing</a></li>
             </ul>
           </div>
             <div class="main-topics-container">
               <h3>Microsoft account & storage</h3>
               <ul class="main-topics">
-                <li><a id="sub-topics" href="https://support.microsoft.com/en-us/account-billing/how-to-sign-in-to-a-microsoft-account-2ffedaca-6e1b-bc18-f28c-58539e1cb6d3">Sign in to your Microsoft account</a></li>
-                <li><a id="sub-topics" href="https://support.microsoft.com/en-us/account-billing/change-your-microsoft-account-password-fdde885b-86da-2965-69fd-4871309ef1f1">Change your microsoft account password</a></li>
-                <li><a id="sub-topics"href="https://support.microsoft.com/en-us/office/how-does-microsoft-storage-work-2a261b34-421c-4a47-9901-74ef5bd0c426">How does microsoft storage work?</a></li>
+                <li><a id="sub-topics" href="">Sign in to your Microsoft account</a></li>
+                <li><a id="sub-topics" href="">Change your microsoft account password</a></li>
+                <li><a id="sub-topics"href="">How does microsoft storage work?</a></li>
               </ul>
              </div>
 
              <div class="main-topics-container">
               <h3>Activation</h3>
               <ul class="main-topics">
-                <li><a id="sub-topics" href="https://support.microsoft.com/en-us/office/activate-office-5bd38f38-db92-448b-a982-ad170b1e187e">Activate office</a></li>
-                <li><a id="sub-topics" href="https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227">Activate windows</a></li>
-                <li><a id="sub-topics"href="https://support.microsoft.com/en-us/windows/find-your-windows-product-key-aaa2bf69-7b2b-9f13-f581-a806abf0a886">Find your windows product key</a></li>
+                <li><a id="sub-topics" href="">Activate office</a></li>
+                <li><a id="sub-topics" href="">Activate windows</a></li>
+                <li><a id="sub-topics"href="">Find your windows product key</a></li>
               </ul>
              </div>
 
              <div class="main-topics-container">
                 <h3>Windows & devices</h3>
                 <ul class="main-topics">
-                  <li><a id="sub-topics" href="https://support.microsoft.com/en-us/windows/windows-11-system-requirements-86c11283-ea52-4782-9efd-7674389a7ba3">Windows 11 system requirements</a></li>
-                  <li><a id="sub-topics" href="https://support.microsoft.com/en-us/windows/windows-8-1-support-ended-on-january-10-2023-3cfd4cde-f611-496a-8057-923fba401e93">Windows 8.1 end of support</a></li>
-                  <li><a id="sub-topics"href="https://support.microsoft.com/warranty">Find your hardware warranty</a></li>
+                  <li><a id="sub-topics" href="">Windows 11 system requirements</a></li>
+                  <li><a id="sub-topics" href="">Windows 8.1 end of support</a></li>
+                  <li><a id="sub-topics"href="">Find your hardware warranty</a></li>
                 </ul>
                </div>
            </div>
@@ -140,6 +140,8 @@
             <div class="copilot-image"><img></div>
             <div class="copilot-details">
               <h1 class="copilot-heading"></h1>
+              <p></p>
+              <h4 class="copilot-link"></h4>
             </div>
         </div>
         <!--Copilot section ends -->
@@ -171,31 +173,31 @@
     <div class="main-topics-container">
     <h3>Contact Support</h3>
     <ul class="main-topics">
-      <li><a id="sub-topics" href="https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME">Contact us</a></li>
-      <li><a id="sub-topics" href="https://answers.microsoft.com/">Ask the community</a></li>
+      <li><a id="sub-topics" href="">Contact us</a></li>
+      <li><a id="sub-topics" href="">Ask the community</a></li>
     </ul>
   </div>
     <div class="main-topics-container">
       <h3>Enterprise support</h3>
       <ul class="main-topics">
-        <li><a id="sub-topics" href="https://support.microsoft.com/hub/4343728/support-for-business">Support for business</a></li>
-        <li><a id="sub-topics" href="https://docs.microsoft.com/office365/admin/admin-home">IT Pros and admins</a></li>
+        <li><a id="sub-topics" href="">Support for business</a></li>
+        <li><a id="sub-topics" href="">IT Pros and admins</a></li>
       </ul>
      </div>
 
      <div class="main-topics-container">
       <h3>Privacy & Security</h3>
       <ul class="main-topics">
-        <li><a id="sub-topics" href="https://support.microsoft.com/security">Security</a></li>
-        <li><a id="sub-topics" href="https://www.microsoft.com/concern/privacy">Report a Privacy concern</a></li>
+        <li><a id="sub-topics" href="">Security</a></li>
+        <li><a id="sub-topics" href="">Report a Privacy concern</a></li>
       </ul>
      </div>
 
      <div class="main-topics-container">
         <h3>More support</h3>
         <ul class="main-topics">
-          <li><a id="sub-topics" href="https://support.microsoft.com/accessibility">Acessibility</a></li>
-          <li><a id="sub-topics" href="https://www.microsoft.com/reportascam/">Report a scam concern</a></li>
+          <li><a id="sub-topics" href="">Acessibility</a></li>
+          <li><a id="sub-topics" href="">Report a scam concern</a></li>
         </ul>
        </div>
    </div>
@@ -213,7 +215,6 @@
     <p>Quickly create and share content that stands out, manage your schedule with<br>ease, effortlessly connect with others and enjoy peace of mind - all with<br>Microsoft 365.</p>
     <button class="trial-button">UNLOCK NOW ></button>
   </div>
-  
 </div>
    <!--Free trail microsoft 365 section ends-->
 
@@ -221,7 +222,7 @@
           <section class="links">
             <div class="links-inner">
               <ul>
-                <li><h3>What's New</h3></li>
+                <li><h3 id="footer-heading">What's New</h3></li>
                 <li><a href="#">Surface Pro X</a></li>
                 <li><a href="#">Surface Laptop 3</a></li>
                 <li><a href="#">Surface Pro 7</a></li>
@@ -229,7 +230,7 @@
                 <li><a href="#">Office apps</a></li>
               </ul>
               <ul>
-                <li><h3>Microsoft Store</h3></li>
+                <li><h3 id="footer-heading">Microsoft Store</h3></li>
                 <li><a href="#">Account Profile</a></li>
                 <li><a href="#">Download Center</a></li>
                 <li><a href="#">Microsoft Store support</a></li>
@@ -237,7 +238,7 @@
                 <li><a href="#">Older tracking</a></li>
               </ul>
               <ul>
-                <li><h3>Education</h3></li>
+                <li><h3 id="footer-heading">Education</h3></li>
                 <li><a href="#">Microsfot in education</a></li>
                 <li><a href="#">Office for students</a></li>
                 <li><a href="#">Office 365 for schools</a></li>
@@ -245,7 +246,7 @@
                 <li><a href="#">Microsfot Azure</a></li>
               </ul>
               <ul>
-                <li><h3>Enterprise</h3></li>
+                <li><h3 id="footer-heading">Enterprise</h3></li>
                 <li><a href="#">Azure</a></li>
                 <li><a href="#">AppSource</a></li>
                 <li><a href="#">Automotive</a></li>
@@ -253,7 +254,7 @@
                 <li><a href="#">Healthcare</a></li>
               </ul>
               <ul>
-                <li><h3>Developer</h3></li>
+                <li><h3 id="footer-heading">Developer</h3></li>
                 <li><a href="#">Visual Studio</a></li>
                 <li><a href="#">Windowszs Dev Center</a></li>
                 <li><a href="#">Developer Network</a></li>
@@ -261,8 +262,8 @@
                 <li><a href="#">Microsoft Developer</a></li>
               </ul>
               <ul>
-                <li><h3>Company</h3></li>
-                <li><a href="#">Careers</a></li>
+                <li><h3 id="footer-heading">Company</h3></li>
+                <li><a href="career.html">Careers</a></li>
                 <li><a href="#">About Microsoft</a></li>
                 <li><a href="#">Company news</a></li>
                 <li><a href="#">Privacy at Microsoft</a></li>
