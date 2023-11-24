@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="css/chatbox.css" />
+<script src="js/chat.js"></script>
+<script src="js/palmbot.js"></script>
+<!-- chat open -->
+<div class="chat-bar-open" id="chat-open">
+  <button
+    id="chat-open-button"
+    type="button"
+    class="collapsible close"
+    onclick="chatOpen()"
+  >
+    ?
+  </button>
+</div>
+<!-- chat close -->
+<div class="chat-bar-close" id="chat-close">
+  <button
+    id="chat-close-button"
+    type="button"
+    class="collapsible close"
+    onclick="chatClose()"
+  >
+    X
+  </button>
+</div>
+<!-- chat-window 1 -->
+<div class="chat-window" id="chat-window1">
+  <div class="hi-there">
+    <p class="p1">Hello!</p>
+    <br />
+    <p class="p2">Get help from our paLM 2 powered chatbot</p>
+  </div>
+  <div class="start-conversation">
+    <h1>Start a Conversation</h1>
+    <br />
+    <p>Get quick resolutions/information about all your Problems and Queries</p>
+    <button class="new-conversation" type="button" onclick="openConversation()">
+      <span>New Conversation</span>
+    </button>
+  </div>
+</div>
+<!-- chat chat-window 2 -->
+<div class="chat-window2" id="chat-window2">
+  <div class="chat-container"></div>
+  <div class="typing-container">
+    <div class="typing-content">
+      <input
+        type="text"
+        class="chat-input"
+        placeholder="Enter Your Prompt Here!"
+      />
+      <input type="button" value="Send" class="send-btn" />
+    </div>
+  </div>
+</div>
