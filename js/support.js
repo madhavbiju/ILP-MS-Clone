@@ -1,102 +1,86 @@
 const listUrl = "https://picsum.photos/list";
 const imageUrl = "https://picsum.photos/seed/";
-fetch(listUrl)
-  .then((response) => {
-    if (!response.ok) {
+const textContentUrl = "https://jsonplaceholder.typicode.com/posts";
+
+const fetchRandomPost = async () => {
+  const response = await fetch(textContentUrl);
+  if (!response.ok) {
+    throw new Error("Network response was not OK");
+  }
+  const data = await response.json();
+  const randomIndex = Math.floor(Math.random() * data.length);
+  return data[randomIndex];
+};
+
+const fetchData = async () => {
+  try {
+    const [imageListResponse, copilotPost] = await Promise.all([
+      fetch(listUrl),
+      fetchRandomPost(),
+    ]);
+
+    if (!imageListResponse.ok) {
       throw new Error("Network response was not OK");
     }
-    return response.json();
-  })
-  .then((data) => {
-    //Fetching images, headings, paragraphs for copilot section
+
+    const imageList = await imageListResponse.json();
+
+    // Copilot section
     const copilotContainer = document.querySelector(".copilot-container");
     const copilotImage = copilotContainer.querySelector(".copilot-image img");
     const copilotDetails = document.querySelector(".copilot-details");
 
-    const randomIndex = Math.floor(Math.random() * data.length);
-
-    copilotImage.src = `${imageUrl}${data[randomIndex].id}/400/600`;
-
-    const copilotHeading = copilotDetails.querySelector("h1");
-    copilotHeading.textContent = data[randomIndex].author;
-
-    const copilotParagraph = copilotDetails.querySelector("p");
-    copilotParagraph.textContent = data[randomIndex].author;
-
+    const randomIndex = Math.floor(Math.random() * imageList.length);
+    copilotImage.src = `${imageUrl}${imageList[randomIndex].id}/400/600`;
+    copilotDetails.querySelector("h1").textContent = copilotPost.title;
+    copilotDetails.querySelector("p").textContent = copilotPost.body;
     const copilotLink = copilotDetails.querySelector(".copilot-link");
-    copilotLink.textContent = "View on Picsum";
-    copilotLink.href = `https://picsum.photos/id/${data[randomIndex].id}/full`;
+    copilotLink.textContent = "EXPLORE WHAT'S POSSIBLE >";
 
+    // Explore section
     const exploreContainer = document.querySelector(".explore-container");
-    for (let i = 0; i <= 3; i += 2) {
-      const randomIndexNumber1 = Math.floor(Math.random() * data.length);
-      const randomIndexNumber2 = Math.floor(Math.random() * data.length);
 
-      const rowContainer = document.createElement("div");
-      rowContainer.classList.add("row-container");
+    for (let i = 0; i < 4; i++) {
+      const exploreminicontainer = document.createElement("div");
+      exploreminicontainer.classList.add("explore-minicontainer");
 
-      const exploreminicontainer1 = document.createElement("div");
-      exploreminicontainer1.classList.add("explore-minicontainer");
+      const exploreitems = document.createElement("div");
+      exploreitems.classList.add("explore-items");
 
-      const exploreitems1 = document.createElement("div");
-      exploreitems1.classList.add("explore-items");
-
-      const exploreimages1 = document.createElement("img");
-      exploreimages1.setAttribute(
+      const exploreimages = document.createElement("img");
+      const randomIndexNumber1 = Math.floor(Math.random() * imageList.length);
+      exploreimages.setAttribute(
         "src",
-        `${imageUrl}${data[randomIndexNumber1].id}/400/600`
+        `${imageUrl}${imageList[randomIndexNumber1].id}/400/600`
       );
-      exploreimages1.classList.add("explore-images");
-      exploreitems1.appendChild(exploreimages1);
+      exploreimages.classList.add("explore-images");
+      exploreitems.appendChild(exploreimages);
 
-      const exploredetails1 = document.createElement("div");
-      exploredetails1.classList.add("explore-details");
+      const exploredetails = document.createElement("div");
+      exploredetails.classList.add("explore-details");
 
-      const exploreheading1 = document.createElement("h2");
-      exploreheading1.textContent = data[randomIndexNumber2].author;
-      exploredetails1.appendChild(exploreheading1);
+      const explorePost = await fetchRandomPost();
 
-      const exploreparagraph1 = document.createElement("p");
-      exploreparagraph1.textContent = data[randomIndexNumber1].author;
-      exploredetails1.appendChild(exploreparagraph1);
+      const exploreheading = document.createElement("h2");
+      exploreheading.textContent = explorePost.title;
+      exploredetails.appendChild(exploreheading);
 
-      exploreitems1.appendChild(exploredetails1);
-      exploreminicontainer1.appendChild(exploreitems1);
+      const exploreparagraph = document.createElement("p");
+      exploreparagraph.textContent = explorePost.body;
+      exploredetails.appendChild(exploreparagraph);
 
-      const exploreminicontainer2 = document.createElement("div");
-      exploreminicontainer2.classList.add("explore-minicontainer");
+      const exploreLink = document.createElement("h4");
+      exploreLink.textContent = "GET THE DETAILS >";
+      exploreLink.classList.add("explore-link");
+      exploredetails.appendChild(exploreLink);
 
-      const exploreitems2 = document.createElement("div");
-      exploreitems2.classList.add("explore-items");
-
-      const exploreimages2 = document.createElement("img");
-      exploreimages2.setAttribute(
-        "src",
-        `${imageUrl}${data[randomIndexNumber2].id}/400/600`
-      );
-      exploreimages2.classList.add("explore-images");
-      exploreitems2.appendChild(exploreimages2);
-
-      const exploredetails2 = document.createElement("div");
-      exploredetails2.classList.add("explore-details");
-
-      const exploreheading2 = document.createElement("h2");
-      exploreheading2.textContent = data[randomIndex].author;
-      exploredetails2.appendChild(exploreheading2);
-
-      const exploreparagraph2 = document.createElement("p");
-      exploreparagraph2.textContent = data[randomIndexNumber2].author;
-      exploredetails2.appendChild(exploreparagraph2);
-
-      exploreitems2.appendChild(exploredetails2);
-      exploreminicontainer2.appendChild(exploreitems2);
-
-      rowContainer.appendChild(exploreminicontainer1);
-      rowContainer.appendChild(exploreminicontainer2);
-
-      exploreContainer.appendChild(rowContainer);
+      exploreitems.appendChild(exploredetails);
+      exploreminicontainer.appendChild(exploreitems);
+      exploreContainer.appendChild(exploreminicontainer);
     }
-  })
-  .catch((error) => {
+  } catch (error) {
     console.error("Fetch error:", error.message);
-  });
+  }
+};
+
+fetchData();
