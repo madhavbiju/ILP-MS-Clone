@@ -27,7 +27,8 @@ function register() {
   }
 
   // Move on with Auth
-  auth.createUserWithEmailAndPassword(email, password)
+  auth
+    .createUserWithEmailAndPassword(email, password)
     .then(function () {
       // Declare user variable
       var user = auth.currentUser;
@@ -47,6 +48,8 @@ function register() {
 
       // DOne
       alert("User Created!!");
+      alert("Login using New Account");
+      setTimeout((window.location = "login.html"), 5000);
     })
     .catch(function (error) {
       // Firebase will use this to alert of its errors
@@ -89,13 +92,15 @@ function login() {
 
       // DOne
       alert("User Logged In!!");
+      alert("Thank You for Login & You are Redirecting to Microsoft Website");
+      setTimeout((window.location = "index.html"), 5000);
     })
     .catch(function (error) {
       // Firebase will use this to alert of its errors
       var error_code = error.code;
       var error_message = error.message;
 
-      alert(error_message);
+      alert("Incorrect Email-ID or Password");
     });
 }
 
