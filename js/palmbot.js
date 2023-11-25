@@ -2,7 +2,7 @@ const chatInput = document.querySelector(".chat-input");
 const sendButton = document.querySelector(".send-btn");
 const chatContainer = document.querySelector(".chat-container");
 
-const API_KEY = "AIzaSyCjG5xgGj166rEzwgLW9Vm8ssLAJBe2Rmg";
+const API_KEY = config.PALM_KEY;
 let UserText = null;
 
 const createChatElement = (content, className) => {
