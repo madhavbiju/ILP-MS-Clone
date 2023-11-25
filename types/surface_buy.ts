@@ -10,6 +10,7 @@ export interface Product {
     stock: number;
     brand: string;
     category: string;
+    redirect : string;
     thumbnail: string;
     images: string[];
   }
