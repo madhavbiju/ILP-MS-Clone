@@ -1,17 +1,20 @@
+// Defining URLs
 const listUrl = "https://picsum.photos/list";
 const imageUrl = "https://picsum.photos/seed/";
 const textContentUrl = "https://jsonplaceholder.typicode.com/posts";
-
+// Function to fetch a random post from the provided text content URL
 const fetchRandomPost = async () => {
   const response = await fetch(textContentUrl);
+  // Check if the network response is OK
   if (!response.ok) {
     throw new Error("Network response was not OK");
   }
   const data = await response.json();
+  // Generate a random index to select a random post
   const randomIndex = Math.floor(Math.random() * data.length);
   return data[randomIndex];
 };
-
+// Function to fetch data from different URLs and update the UI
 const fetchData = async () => {
   try {
     const [imageListResponse, copilotPost] = await Promise.all([
@@ -29,7 +32,7 @@ const fetchData = async () => {
     const copilotContainer = document.querySelector(".copilot-container");
     const copilotImage = copilotContainer.querySelector(".copilot-image img");
     const copilotDetails = document.querySelector(".copilot-details");
-
+    // Update copilot section with a random image and details from a random post
     const randomIndex = Math.floor(Math.random() * imageList.length);
     copilotImage.src = `${imageUrl}${imageList[randomIndex].id}/400/600`;
     copilotDetails.querySelector("h1").textContent = copilotPost.title;
@@ -39,7 +42,7 @@ const fetchData = async () => {
 
     // Explore section
     const exploreContainer = document.querySelector(".explore-container");
-
+    // Create four Explore section items
     for (let i = 0; i < 4; i++) {
       const exploreminicontainer = document.createElement("div");
       exploreminicontainer.classList.add("explore-minicontainer");
@@ -49,6 +52,7 @@ const fetchData = async () => {
 
       const exploreimages = document.createElement("img");
       const randomIndexNumber1 = Math.floor(Math.random() * imageList.length);
+      // Create an image element and set its source
       exploreimages.setAttribute(
         "src",
         `${imageUrl}${imageList[randomIndexNumber1].id}/400/600`
@@ -58,7 +62,7 @@ const fetchData = async () => {
 
       const exploredetails = document.createElement("div");
       exploredetails.classList.add("explore-details");
-
+      // Fetch a random post for Explore section
       const explorePost = await fetchRandomPost();
 
       const exploreheading = document.createElement("h2");
@@ -82,5 +86,5 @@ const fetchData = async () => {
     console.error("Fetch error:", error.message);
   }
 };
-
+// Call the fetchData function to initiate data fetching and UI update
 fetchData();
