@@ -1,62 +1,86 @@
-const url = "https://dummyjson.com/products";
+const listUrl = "https://picsum.photos/list";
+const imageUrl = "https://picsum.photos/seed/";
+const textContentUrl = "https://jsonplaceholder.typicode.com/posts";
 
-fetch(url)
-  .then((response) => {
-    if (!response.ok) {
+const fetchRandomPost = async () => {
+  const response = await fetch(textContentUrl);
+  if (!response.ok) {
+    throw new Error("Network response was not OK");
+  }
+  const data = await response.json();
+  const randomIndex = Math.floor(Math.random() * data.length);
+  return data[randomIndex];
+};
+
+const fetchData = async () => {
+  try {
+    const [imageListResponse, copilotPost] = await Promise.all([
+      fetch(listUrl),
+      fetchRandomPost(),
+    ]);
+
+    if (!imageListResponse.ok) {
       throw new Error("Network response was not OK");
     }
-    return response.json();
-  })
-  .then((data) => {
-    //Fetching images ,headings,paragraphs for copilot section
+
+    const imageList = await imageListResponse.json();
+
+    // Copilot section
     const copilotContainer = document.querySelector(".copilot-container");
-    const copilotdetails = document.querySelector(".copilot-details");
-    // Generate a random index to select a different image each time
-    const randomIndex = Math.floor(Math.random() * 10);
+    const copilotImage = copilotContainer.querySelector(".copilot-image img");
+    const copilotDetails = document.querySelector(".copilot-details");
 
-    const copilotImages = document.createElement("img");
-    copilotImages.setAttribute("src", data.products[randomIndex].thumbnail);
-    copilotImages.classList.add("img");
-    copilotContainer.appendChild(copilotImages);
+    const randomIndex = Math.floor(Math.random() * imageList.length);
+    copilotImage.src = `${imageUrl}${imageList[randomIndex].id}/400/600`;
+    copilotDetails.querySelector("h1").textContent = copilotPost.title;
+    copilotDetails.querySelector("p").textContent = copilotPost.body;
+    const copilotLink = copilotDetails.querySelector(".copilot-link");
+    copilotLink.textContent = "EXPLORE WHAT'S POSSIBLE >";
 
-    const copilotheading = document.createElement("h1");
-    copilotheading.textContent = data.products[randomIndex].title;
-    copilotheading.classList.add("h1");
-    copilotdetails.appendChild(copilotheading);
-
-    const copilotparagraph = document.createElement("p");
-    copilotparagraph.textContent = data.products[randomIndex].description;
-    copilotparagraph.classList.add("p");
-    copilotdetails.appendChild(copilotparagraph);
-    //Fetching images ,headings,paragraphs for explore section
-
+    // Explore section
     const exploreContainer = document.querySelector(".explore-container");
-    for (let i = 0; i <= 3; i++) {
-      const randomIndexNumber = Math.floor(Math.random() * 6);
+
+    for (let i = 0; i < 4; i++) {
       const exploreminicontainer = document.createElement("div");
       exploreminicontainer.classList.add("explore-minicontainer");
+
       const exploreitems = document.createElement("div");
       exploreitems.classList.add("explore-items");
+
       const exploreimages = document.createElement("img");
+      const randomIndexNumber1 = Math.floor(Math.random() * imageList.length);
       exploreimages.setAttribute(
         "src",
-        data.products[randomIndexNumber].thumbnail
+        `${imageUrl}${imageList[randomIndexNumber1].id}/400/600`
       );
       exploreimages.classList.add("explore-images");
       exploreitems.appendChild(exploreimages);
+
       const exploredetails = document.createElement("div");
       exploredetails.classList.add("explore-details");
+
+      const explorePost = await fetchRandomPost();
+
       const exploreheading = document.createElement("h2");
-      exploreheading.textContent = data.products[randomIndexNumber].title;
+      exploreheading.textContent = explorePost.title;
       exploredetails.appendChild(exploreheading);
+
       const exploreparagraph = document.createElement("p");
-      exploreparagraph.textContent = data.products[randomIndexNumber].brand;
+      exploreparagraph.textContent = explorePost.body;
       exploredetails.appendChild(exploreparagraph);
+
+      const exploreLink = document.createElement("h4");
+      exploreLink.textContent = "GET THE DETAILS >";
+      exploreLink.classList.add("explore-link");
+      exploredetails.appendChild(exploreLink);
+
       exploreitems.appendChild(exploredetails);
       exploreminicontainer.appendChild(exploreitems);
       exploreContainer.appendChild(exploreminicontainer);
     }
-  })
-  .catch((error) => {
+  } catch (error) {
     console.error("Fetch error:", error.message);
-  });
+  }
+};
+
+fetchData();
