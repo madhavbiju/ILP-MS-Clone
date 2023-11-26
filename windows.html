@@ -64,219 +64,168 @@
             you,learn<br />
             and play
           </p>
-          <button class="getWindowsButton" onclick="myButton()">
+          <button id="getWindowsButton" class="button" onclick="myButton()">
             Get Windows 11
           </button>
         </div>
         <!--Section b -->
       </section>
-      <section>
-        <div class="container--b">
-          <p1 id="p1">The best Windows yet</p1><br /><br />
-          <p2 id="p2">when there's lot to do, let windows 11 helps you</p2>
+    </section>
+    <section>
+      <div class="container--b">
+        <p1 id="p1">The best Windows yet</p1><br /><br />
+        <p2 id="p2">when there's lot to do, let windows 11 helps you</p2>
 
-          <div class="image-container-b"></div>
-        </div>
-      </section>
+        <div class="image-container-b"></div>
+      </div>
+    </section>
+
+    <!--Copilot section-C-->
+    <section>
       <div class="container--c"></div>
-      <!-- Copilot section-C -->
-      <section>
-        <div class="container--c">
-          <div class="container--c-image">
+    </section>
+    <!--Copilot section ends here-->
+    <!--Sync PC and Phone --Starts here-->
+    <section>
+      <div class="container--c">
+        <div class="container--c-content">
+          <div class="blue_linec"></div>
+          <p id="p4">Sync your PC & <br />phone</p>
+          <br />
+          <p>
+            Microsoft Phone Link makes<br />
+            it possible to make calls, reply to texts, and check your phone's
+            <br />notifications from your PC
+          </p>
+          <br />
+          <button id="exploreButton" class="button" onclick="exploreButton()">
+            Explore Phone Link
+          </button>
+        </div>
+        <div class="container--c-image">
+          <video autoplay loop muted class="vid-d">
+            <source
+              src="https://wus-streaming-video-rt-microsoft-com.akamaized.net/3e5cf04b-a888-4954-9910-419331ffb3b6/99cc68c4-a0a9-4a75-90d6-a1a2f0ca_2250.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+    <!--Section e-->
+    <section>
+      <div>
+        <div class="container--e">
+          <p1 id="p5">Find the right fit</p1><br />
+          <p2 id="p6"
+            >Explore a selection of new PCs, or get help selecting the best
+            computer for your unique needs.</p2
+          >
+          <br />
+          <br />
+          <button id="helpMeChoose" class="button" onclick="helpMeChoose()">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--Section f-->
+
+    <div id="dynamic-images"></div>
+   
+
+    <!--section g-->
+    <div class="container-gradient">
+      <div class="container--g">
+        <div class="container--g-top">
+          <div class="container--g-content">
+            <div class="blue_linec"></div>
+            <p id="p4">Better <br />togather</p>
+            <br />
+            <p>
+              Discover the Windows 11 experiences built to <br />bring your
+              favourite Microsoft tools to life
+            </p>
+            <br />
+          </div>
+          <div class="container--g-image">
             <img
+              style="margin-right: 60px"
               class="img-c"
-              src="assets/copilot_img.png"
+              src="assets/image-g.png"
               alt="copilot-image"
             />
           </div>
-          <div class="container--c-content">
-            <div class="blue_linec"></div>
-            <p id="p4">Meet Copilot in<br />windows</p>
-            <br />
-            <p>
-              Find the information and ideas you need to power <br />your
-              ingenuity. Copilot in Windows is a new AI<br />
-              feature in Windows 11. With it you can get answers <br />fast and
-              ask follow-up questions, get AI-generated <br />graphics based on
-              your ideas, and kickstart your <br />creativity while you work.
-              Get to know Copilot in<br />
-              Windows, your new intelligent assistant.<br />
-            </p>
-            <br />
-            <button class="learnMore" onclick="myButtonCopilot()">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-      <!--Copilot section ends here-->
-      <!--Sync PC and Phone --Starts here-->
-      <section>
-        <div class="container--c">
-          <div class="container--c-content">
-            <div class="blue_linec"></div>
-            <p id="p4">Sync your PC & <br />phone</p>
-            <br />
-            <p>
-              Microsoft Phone Link makes<br />
-              it possible to make calls, reply to texts, and check your phone's
-              <br />notifications from your PC
-            </p>
-            <br />
-            <button class="exploreButton" onclick="exploreButton()">
-              Explore Phone Link
-            </button>
-          </div>
-          <div class="container--c-image">
-            <video autoplay loop muted class="vid-d">
-              <source
-                src="https://wus-streaming-video-rt-microsoft-com.akamaized.net/3e5cf04b-a888-4954-9910-419331ffb3b6/99cc68c4-a0a9-4a75-90d6-a1a2f0ca_2250.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
-      <!--Section e-->
-      <section>
-        <div>
-          <div class="container--e">
-            <p1 id="p5">Find the right fit</p1><br />
-            <p2 id="p6"
-              >Explore a selection of new PCs, or get help selecting the best
-              computer for your unique needs.</p2
-            >
-            <br />
-            <br />
-            <button class="helpMeChoose" onclick="helpMeChoose()">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-      <!--Section f-->
-      <div class="container--images">
-        <img
-          class="container--images_left"
-          style="height: 550px; width: 800px"
-          src="assets/image_left.png"
-        />
-        <div class="container--images-right">
-          <div class="container--images-right-top">
-            <img
-              class="container--images-right-top1"
-              style="height: 250px; width: 250px"
-              src="assets/image_right_top1.png"
-              alt="top1"
-            />
-            <img
-              class="container--images-right-top1"
-              style="height: 250px; width: 250px"
-              src="assets/image_right_top2.png"
-              alt="top2"
-            />
-          </div>
-          <div class="container--image-right-bottom">
-            <img
-              style="height: 310px; width: 600px"
-              src="assets/image_right_bottom.png"
-              alt
-            /><img />
-          </div>
         </div>
       </div>
 
-      <!--section g-->
-      <div class="container-gradient">
-        <div class="container--g">
-          <div class="container--g-top">
-            <div class="container--g-content">
-              <div class="blue_linec"></div>
-              <p id="p4">Better <br />togather</p>
-              <br />
-              <p>
-                Discover the Windows 11 experiences built to <br />bring your
-                favourite Microsoft tools to life
-              </p>
-              <br />
-            </div>
-            <div class="container--g-image">
-              <img
-                style="margin-right: 60px"
-                class="img-c"
-                src="assets/image-g.png"
-                alt="copilot-image"
-              />
-            </div>
-          </div>
-        </div>
+      <!--section--h-->
 
-        <!--section--h-->
-
-        <div class="container--h">
-          <p1 id="p1">The best Windows yet</p1><br /><br />
-          <p2 id="p2">when there's lot to do, let windows 11 helps you</p2>
-        </div>
-
-        <div class="container--i"></div>
+      <div class="container--h">
+        <p1 id="p1">The best Windows yet</p1><br /><br />
+        <p2 id="p2">when there's lot to do, let windows 11 helps you</p2>
       </div>
 
-      <!--section--f-->
-      <div class="container--f">
-        <div class="container--f-left">
-          <h2>Looking for more?</h2>
-          <p>
-            Get help with your transition to<br />Windows 11, and make the most
-            of <br />your Windows experience.
-          </p>
-          <br />
-          <img id="search-bar" src="/assets/search_bar.png" alt="search-bar" />
-        </div>
-        <div class="container--f-right">
-          <hr />
-          <br />
-          <h2>Get Windows 11</h2>
-          <p>
-            Intuitive. Easy. Faster than ever. Experience all Windows has to
-            offer.
-          </p>
-          <br /><a
-            href="https://www.microsoft.com/en-in/windows/get-windows-11"
-            class="link"
-            >Get the best windows yes ></a
-          ><br />
-          <br />
-          <hr />
-          <br />
-          <h2>Get Microsoft news and updates</h2>
-          <p>
-            Subscribe to our newsletter to get the latest news, feature updates,
-            how-to tips, deals<br />
-            and more for Windows and other Microsoft products.
-          </p>
-          <br /><a
-            href="https://account.microsoft.com/account/subscribe?TID=30799600-90d3-4c16-9362-48529640ab2c&SRU=1SWDNWVSTY&CRU=2SWDNWVS&refd=www.microsoft.com&ru=https%3A%2F%2Faccount.microsoft.com%2Fprofile%2Fsubscribe%3FTID%3D30799600-90d3-4c16-9362-48529640ab2c%26SRU%3D1SWDNWVSTY%26CRU%3D2SWDNWVS%26refd%3Dwww.microsoft.com&destrt=subscribe-page"
-            class="link"
-            >Subscribe Now></a
-          ><br />
-          <br />
-          <hr />
-          <h2>Become an insider</h2>
-          <br />
-          <p>
-            Register with the Windows Insider Programme and start engaging with
-            engineers to<br />
-            help shape the future of Windows.
-          </p>
-          <br /><a
-            href="https://www.microsoft.com/en-us/windowsinsider/"
-            class="link"
-            >Learn More</a
-          >
-        </div>
+      <div class="container--i"></div>
+    </div>
+
+    <!--section--f-->
+    <div class="container--f">
+      <div class="container--f-left">
+        <h2>Looking for more?</h2>
+        <p>
+          Get help with your transition to<br />Windows 11, and make the most
+          of <br />your Windows experience.
+        </p>
+        <br />
+        <img id="search-bar" src="/assets/search_bar.png" alt="search-bar" />
+      </div>
+      <div class="container--f-right">
+        <hr />
+        <br />
+        <h2>Get Windows 11</h2>
+        <p>
+          Intuitive. Easy. Faster than ever. Experience all Windows has to
+          offer.
+        </p>
+        <br /><a
+          href="https://www.microsoft.com/en-in/windows/get-windows-11"
+          class="link"
+          >Get the best windows yes ></a
+        ><br />
+        <br />
+        <hr />
+        <br />
+        <h2>Get Microsoft news and updates</h2>
+        <p>
+          Subscribe to our newsletter to get the latest news, feature updates,
+          how-to tips, deals<br />
+          and more for Windows and other Microsoft products.
+        </p>
+        <br /><a
+          href="https://account.microsoft.com/account/subscribe?TID=30799600-90d3-4c16-9362-48529640ab2c&SRU=1SWDNWVSTY&CRU=2SWDNWVS&refd=www.microsoft.com&ru=https%3A%2F%2Faccount.microsoft.com%2Fprofile%2Fsubscribe%3FTID%3D30799600-90d3-4c16-9362-48529640ab2c%26SRU%3D1SWDNWVSTY%26CRU%3D2SWDNWVS%26refd%3Dwww.microsoft.com&destrt=subscribe-page"
+          class="link"
+          >Subscribe Now></a
+        ><br />
+        <br />
+        <hr />
+        <h2>Become an insider</h2>
+        <br />
+        <p>
+          Register with the Windows Insider Programme and start engaging with
+          engineers to<br />
+          help shape the future of Windows.
+        </p>
+        <br /><a
+          href="https://www.microsoft.com/en-us/windowsinsider/"
+          class="link"
+          >Learn More</a
+        >
       </div>
     </div>
+  </div>
+
 
     <!-- Links -->
     <section class="links">
