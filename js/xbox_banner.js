@@ -1,4 +1,5 @@
-const pexelsApiKey = "WMNynpV8PSJVZhHrDiErkhOjr0bBPS0EBVCLBEpO7aGuBJHsntnVSjKX";
+// Fetch API Key from config
+const pexelsApiKey = config.PEXELS_KEY;
 const pexelsApiUrl = "https://api.pexels.com/v1/curated?per_page=3";
 const quotableApiUrl = "https://api.quotable.io/quotes?limit=3";
 
