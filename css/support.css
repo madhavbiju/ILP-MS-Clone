@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-
+/* Body styles */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #fff;
@@ -20,7 +20,7 @@ a {
 ul {
   list-style: none;
 }
-
+/* Navigation bar styles */
 .main-nav {
   display: flex;
   align-items: center;
@@ -35,7 +35,7 @@ ul {
 .main-nav .logo {
   width: 110px;
 }
-
+/* Main menu styles */
 .main-nav ul {
   display: flex;
 }
@@ -112,46 +112,7 @@ ul {
 .links li {
   line-height: 2.8;
 }
-
-.footer {
-  background: #f2f2f2;
-  color: #616161;
-  font-size: 12px;
-  padding: 20px 0;
-  bottom: 100%;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer div {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.footer div i {
-  margin-right: 10px;
-}
-
-.footer ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer li {
-  margin-right: 30px;
-  margin-bottom: 20px;
-}
-.links .links-inner ul {
-  margin-bottom: 20px;
-}
+ /* Header styles */
 .main-container-header {
   max-width: 1300px;
   height: 280px;
@@ -192,6 +153,7 @@ input {
   padding-top: 20px;
   padding-bottom: 22px;
 }
+/* Main container input styles */
 .main-container-input {
   position: relative;
   display: flex;
@@ -217,7 +179,7 @@ input {
   color: white;
   text-decoration: underline;
 }
-
+/* Search-input container styles */
 #search-input {
   padding: 8px;
   width: calc(100% - 50px);
@@ -239,11 +201,13 @@ input {
   cursor: pointer;
   font-size: 18px;
 }
+/* Sign-in container styles */
 .signin-container {
   display: flex;
   justify-content: center;
   padding-left: 5%;
 }
+/* Product images styles */
 .products-images {
   width: 60px;
   height: 60px;
@@ -266,11 +230,13 @@ input {
 a:hover {
   text-decoration: underline;
 }
+/* Sub-topics styles */
 #sub-topics {
   color: #115ba9;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+/* Topics container styles */
 .topics {
   display: flex;
   padding-left: 10px;
@@ -278,6 +244,7 @@ a:hover {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+/* Container topics styles */
 .container-topics {
   text-align: left;
 }
@@ -291,6 +258,7 @@ h1 {
 .product-container {
   background-color: #f2f2f2;
 }
+/* More products link styles */
 #more-products {
   color: #115ba9;
   font-family: Arial, Helvetica, sans-serif;
@@ -336,7 +304,45 @@ h2 {
   padding-left: 15px;
   padding-bottom: 0%;
 }
+/* Copilot section styles */
 
+.copilot-container {
+  display: flex;
+  align-items: center; 
+  background-color: #f2f2f2;
+  height: 400px;
+}
+
+.copilot-image img {
+  max-width: 100%; 
+  border-radius: 7px;
+  margin-left: 50px;
+  width: 600px;
+  height: 300px;
+}
+
+.copilot-link {
+  text-transform: uppercase;
+  color: #115ba9;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.copilot-link:hover {
+  text-decoration: underline;
+}
+
+.copilot-details{
+  margin-bottom: 50px;
+  text-align: justify;
+  padding-right: 20px;
+  padding-left: 80px;
+  width: 800px;
+}
+/* Explore section styles */
 .explore-images {
   width: 250px;
   height: 150px;
@@ -385,7 +391,7 @@ h2 {
   margin-bottom: 70px;
   margin-left: 10px;
 }
-
+/* Success section styles */
 #main-heading {
   text-align: center;
 }
@@ -426,38 +432,43 @@ h3 {
   background-color: #fff;
 }
 
-.copilot-container {
+/* Footer styles */
+.footer {
+  background: #f2f2f2;
+  color: #616161;
+  font-size: 12px;
+  padding: 20px 0;
+  bottom: 100%;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
   display: flex;
   align-items: center;
-  background-color: #f2f2f2;
-  height: 400px;
+  justify-content: space-between;
 }
 
-.copilot-image img {
-  max-width: 100%;
-  border-radius: 7px;
-  margin-left: 50px;
-  width: 500px;
-  height: 300px;
+.footer div {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
-.copilot-link {
-  text-transform: uppercase;
-  color: #115ba9;
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  padding-left: 15px;
-  margin-top: 10px;
+.footer div i {
+  margin-right: 10px;
 }
 
-.copilot-link:hover {
-  text-decoration: underline;
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
 }
-.copilot-details {
-  margin-bottom: 80px;
-  text-align: justify;
-  padding-right: 20px;
-  padding-left: 80px;
-  width: 800px;
+
+.footer li {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.links .links-inner ul {
+  margin-bottom: 20px;
 }
