@@ -69,7 +69,7 @@ fetch(apiResponse)
 // Function to create an image container
 function createImageContainer(imageUrl, title) {
     var imageContainer = document.createElement("div");
-    imageContainer.classList.add("image-container");
+    imageContainer.classList.add("image-container col-");
     var image = document.createElement("img");
     image.src = imageUrl;
     var titleElement = document.createElement("a");
@@ -78,4 +78,13 @@ function createImageContainer(imageUrl, title) {
     imageContainer.appendChild(image);
     imageContainer.appendChild(titleElement);
     return imageContainer;
+}
+function performSearch() {
+    // Get the search input value
+    var searchInput = document.getElementById('search-input').value;
+    // Construct the search query URL
+    var searchQuery = encodeURIComponent(searchInput);
+    var searchURL = "https://support.microsoft.com/en-US/search/results?query=".concat(searchQuery, "&isEnrichedQuery=true");
+    // Redirect the user to the search page
+    window.location.href = searchURL;
 }

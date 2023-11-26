@@ -4,6 +4,10 @@
     <script>
       var exports = {};
     </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Microsoft Surface</title>
@@ -13,6 +17,85 @@
   </head>
   <body>
     <!-- Nav -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+        <img
+          src="https://i.ibb.co/wwLhz98/logo.png"
+          alt="Microsoft"
+          class="logo"
+        />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>Surface</b></a>
+          </li>
+          <li class="nav-item" id="first-li">
+            <a class="nav-link" href="#">Microsoft 365</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Computers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Computers for business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Accessories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Where to buy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              All Microsoft ˅
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img src="assets/search_Icon.png" width="20px" height="20px" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img
+                src="assets/Sample_User_Icon.png"
+                width="30px"
+                height="30px"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+
     <nav class="main-nav">
       <a href="index.html"
         ><img
@@ -32,7 +115,6 @@
         <li><a href="#">Accessories</a></li>
         <li><a href="#">Where to buy</a></li>
         <li><a href="#">Support</a></li>
-        <!-- <li><a href="#">Support</a></li> -->
       </ul>
 
       <ul class="right-menu">
@@ -63,19 +145,35 @@
     <div class="main-container">
       <div class="main-container-header">
         <h1 id="main-heading">Surface help & learning</h1>
-        <!-- <div class="signin-container">
-      <p>Please sign in so we may serve you better</p>
-      <button class="main-container-button">Sign in</button></div> -->
         <div class="main-container-input">
           <input
             type="text"
             id="search-input"
             placeholder="How can we help you?"
           />
-          <button id="search-button">&#8594;</button>
+          <button id="search-button" onclick="performSearch()">&#8594;</button>
         </div>
       </div>
     </div>
+
+    <!-- <div class="container-fluid main-container">
+      <div class="row main-container-header">
+        <div class="col-md-8">
+          <h1 id="main-heading">Surface help & learning</h1>
+        </div>
+        <div class="col-md-4">
+          <div class="input-group main-container-input">
+            <input
+              type="text"
+              class="form-control"
+              id="search-input"
+              placeholder="How can we help you?"
+            />
+            <button class="btn btn-primary" id="search-button">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
     <!-- search end -->
 
@@ -163,7 +261,9 @@
   <button onclick="topFunction()" id="scrollButton" title="Go to top">
     ↑ Back to Top
   </button>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <script src="/js/backtotop.js"></script>
   <script src="/ts/surface_support.js"></script>
   <script src="/js/dropdown.js"></script>

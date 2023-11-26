@@ -84,7 +84,7 @@ fetch(apiResponse)
 // Function to create an image container
 function createImageContainer(imageUrl: string, title: string): HTMLDivElement {
   const imageContainer: HTMLDivElement = document.createElement("div");
-  imageContainer.classList.add("image-container");
+  imageContainer.classList.add("image-container col-");
 
   const image: HTMLImageElement = document.createElement("img");
   image.src = imageUrl;
@@ -98,3 +98,16 @@ function createImageContainer(imageUrl: string, title: string): HTMLDivElement {
 
   return imageContainer;
 }
+
+function performSearch(): void {
+  // Get the search input value
+  const searchInput = (document.getElementById('search-input') as HTMLInputElement).value;
+
+  // Construct the search query URL
+  const searchQuery = encodeURIComponent(searchInput);
+  const searchURL = `https://support.microsoft.com/en-US/search/results?query=${searchQuery}&isEnrichedQuery=true`;
+
+  // Redirect the user to the search page
+  window.location.href = searchURL;
+}
+
