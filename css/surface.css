@@ -305,14 +305,13 @@ video {
   background-color: #f3f2f3;
 }
 .laptop-link {
-  font-size: medium;
+  flex: 1;
+  text-align: center;
   color: rgb(80, 80, 242);
   text-decoration: none;
+  font-size: medium;
 }
 
 .laptop-link :hover {
-  text-decoration: underline; /* Add underline on hover */
-}
-.buy {
-  text-align: center;
+  text-decoration: underline;
 }
