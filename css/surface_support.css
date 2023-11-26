@@ -1,0 +1,87 @@
+.main-container-header {
+  max-width: 100%;
+  width: 100%;
+  height: 250px;
+  color: white;
+  background-color: #505050;
+  /* background-image: url(https://support.content.office.net/en-us/media/76bb3497-baf7-4f68-ac15-0da34f0caf56.png); */
+  text-align: center;
+  padding-top: 10px;
+}
+.main-container-input {
+  /* position: relative; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px; /* Adjusted height */
+  margin-left: 250px;
+  margin-right: 150px;
+  margin-top: 70px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#main-heading {
+  text-align: center;
+  font-size: 50px;
+  /* margin-top: 50px; */
+}
+
+#search-input {
+  padding: 8px; /* Adjusted padding */
+  width: calc(100% - 50px); /* Adjusted width to accommodate the button */
+  border: none;
+  justify-content: center;
+  font-size: 14px; /* Adjusted font size */
+  padding-bottom: 15px;
+  /* padding-top: 10px; */
+}
+#search-button {
+  position: relative;
+  z-index: 1; /* Ensure the button is above the input */
+  margin-left: -30px; /* Negative margin to overlap with the input */
+  padding: 5px; /* Adjusted padding */
+  background-color: white;
+  color: #0078d4;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Adjusted font size */
+}
+
+.row1 {
+  display: flex;
+  /* justify-content: space-around; */
+  margin-bottom: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.image-container {
+  width: 250px; /* Adjust the width as needed */
+  margin: 20px;
+  /* border: 1px solid #ccc; */
+  padding: 20px;
+  overflow: hidden;
+  object-fit: cover;
+  text-align: center;
+}
+.image-container a {
+  text-decoration: none;
+}
+
+.image-container img {
+  /* max-width: 100%; */
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  /* background-color: #f2f2f2; */
+}
+#dynamicDivsContainer {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.div-txt {
+  padding: 40px;
+}
+#dynamicDivsContainerMid {
+  text-align: center;
+}
