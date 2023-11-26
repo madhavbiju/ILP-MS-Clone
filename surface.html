@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="/css/surface.css" />
     <link rel="stylesheet" href="/css/backtotop.css" />
     <link rel="stylesheet" href="/css/header_footer.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#popupchat").load("popup.html");
+      });
+    </script>
   </head>
   <body>
+    <!-- Injecting Pop Up Chat Code -->
+    <div id="popupchat"></div>
     <!-- Nav -->
     <nav class="main-nav">
       <a href="index.html"
