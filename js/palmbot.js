@@ -1,7 +1,9 @@
+// Get elements using their ids
 const chatInput = document.querySelector(".chat-input");
 const sendButton = document.querySelector(".send-btn");
 const chatContainer = document.querySelector(".chat-container");
 
+// Fetch API Key from config file
 const API_KEY = config.PALM_KEY;
 let UserText = null;
 
@@ -12,6 +14,7 @@ const createChatElement = (content, className) => {
   return chatDiv;
 };
 
+// Function which fetches the outputs from the API
 const getChatResponse = async (inChatDiv) => {
   const API_ENDPOINT =
     "https://generativelanguage.googleapis.com/v1beta2/models/chat-bison-001:generateMessage?key=" +
@@ -95,6 +98,7 @@ const showTypingAnimation = () => {
   getChatResponse(inChatDiv);
 };
 
+// Send inputed Query to API
 const handleOutgoingChat = () => {
   UserText = chatInput.value.trim();
   if (!UserText) return;
