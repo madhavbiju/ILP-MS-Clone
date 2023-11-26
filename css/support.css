@@ -30,6 +30,8 @@ ul {
   font-size: 13px;
   margin-left: 50px;
   margin-right: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .main-nav .logo {
@@ -96,6 +98,7 @@ ul {
   font-size: 12px;
   padding: 35px 0;
   margin-top: 50px;
+  margin-top: 50px;
 }
 
 .links-inner {
@@ -116,9 +119,14 @@ ul {
 .main-container-header {
   max-width: 1300px;
   height: 280px;
+  max-width: 1300px;
+  height: 280px;
   color: white;
   background-image: url(https://support.content.office.net/en-us/media/76bb3497-baf7-4f68-ac15-0da34f0caf56.png);
   text-align: center;
+}
+#search-icon {
+  margin-top: 7px;
 }
 #search-icon {
   margin-top: 7px;
@@ -159,11 +167,13 @@ input {
   display: flex;
   align-items: center;
   height: 60px;
+  height: 60px;
   margin-left: 250px;
   margin-right: 150px;
 }
 .main-container-button {
   color: white;
+  background-color: #346ec8;
   background-color: #346ec8;
   border: 1px solid white;
   padding: 6px 6px;
@@ -176,6 +186,7 @@ input {
 }
 .main-container-button:hover {
   background-color: #346ec8;
+  background-color: #346ec8;
   color: white;
   text-decoration: underline;
 }
@@ -183,8 +194,11 @@ input {
 #search-input {
   padding: 8px;
   width: calc(100% - 50px);
+  padding: 8px;
+  width: calc(100% - 50px);
   border: none;
   justify-content: center;
+  font-size: 14px;
   font-size: 14px;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -195,10 +209,14 @@ input {
   z-index: 1;
   margin-left: -30px;
   padding: 5px;
+  z-index: 1;
+  margin-left: -30px;
+  padding: 5px;
   background-color: white;
   color: #0078d4;
   border: none;
   cursor: pointer;
+  font-size: 18px;
   font-size: 18px;
 }
 /* Sign-in container styles */
@@ -218,12 +236,17 @@ input {
 }
 .list-container {
   padding-left: 13px;
+  padding-left: 13px;
   padding-right: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
+  display: flex;
+  flex-direction: column;
   background-color: #f2f2f2;
+  align-items: center;
+  width: 100%;
   align-items: center;
   width: 100%;
 }
@@ -239,6 +262,7 @@ a:hover {
 /* Topics container styles */
 .topics {
   display: flex;
+  padding-left: 10px;
   padding-left: 10px;
   justify-content: center;
   padding-top: 20px;
@@ -265,14 +289,22 @@ h1 {
   font-size: 15px;
   padding-left: 15px;
   padding-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 #more-products:hover {
   text-decoration: underline;
 }
 
+
 .container-topics {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+#product-names {
+  padding-top: 20px;
 }
 #product-names {
   padding-top: 20px;
@@ -283,11 +315,13 @@ h1 {
   padding: 30px;
 }
 
+
 .trial-container {
   background-color: #f2f2f2;
   display: flex;
   padding-bottom: 20px;
 }
+
 
 p {
   padding-left: 15px;
@@ -299,6 +333,7 @@ h1 {
   padding-left: 15px;
   text-align: left;
 }
+
 
 h2 {
   padding-left: 15px;
@@ -348,10 +383,35 @@ h2 {
   height: 150px;
 }
 
+
 .explore-items {
+  margin-left: 30px;
   margin-left: 30px;
   display: flex;
 }
+
+.explore-details {
+  text-align: justify;
+  width: 300px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  margin-top: 0px;
+}
+
+.explore-link {
+  color: #115ba9;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.explore-link:hover {
+  text-decoration: underline;
+}
+
 
 .explore-details {
   text-align: justify;
@@ -380,14 +440,19 @@ h2 {
   padding-bottom: 20px;
 }
 
+
 .explore-container {
   display: flex;
   flex-wrap: wrap;
+  flex-wrap: wrap;
 }
+
 
 .explore-minicontainer {
   flex: 1;
   padding-bottom: 20px;
+  margin-bottom: 70px;
+  margin-left: 10px;
   margin-bottom: 70px;
   margin-left: 10px;
 }
@@ -402,12 +467,19 @@ h2 {
 .success-details {
   margin-left: 80px;
 }
+.success-details {
+  margin-left: 80px;
+}
 .video-container {
   padding: 30px;
+  margin-left: 60px;
   margin-left: 60px;
 }
 h3 {
   padding-left: 30px;
+}
+#footer-heading {
+  padding-left: 0%;
 }
 #footer-heading {
   padding-left: 0%;
