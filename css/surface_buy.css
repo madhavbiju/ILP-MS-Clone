@@ -9,7 +9,7 @@
 .top-txt {
   position: absolute;
   top: 35%;
-  left: 20%;
+  left: 24%;
   transform: translate(-50%, -50%);
   /* color: white; */
   font-size: 30px;
@@ -18,7 +18,7 @@
 .sub-txt {
   position: absolute;
   top: 70%;
-  left: 22%;
+  left: 28%;
   transform: translate(-50%, -50%);
   /* color: white; */
   font-size: 21px;
@@ -79,4 +79,7 @@
 }
 .section-six-subtxt li {
   display: inline-block;
+}
+.brand-div {
+  text-align: center;
 }
