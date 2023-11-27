@@ -15,15 +15,15 @@ fetch(apiURL)
   .then((data) => {
     const products = data.products.slice(0, 2);
     products.forEach((product) => {
-      const container = document.querySelector(".column2");
+      const container = document.querySelector(".column2") as HTMLDivElement;
       if (container) {
-        const row = document.createElement("div");
+        const row = document.createElement("div") as HTMLElement;
         row.classList.add("row1");
 
-        const image = document.createElement("img");
+        const image = document.createElement("img") as HTMLImageElement;
         image.src = product.thumbnail;
 
-        const anchor = document.createElement("a");
+        const anchor = document.createElement("a") as HTMLAnchorElement;
         anchor.classList.add("row-anchor");
         anchor.href = "#";
         anchor.textContent = product.title;
@@ -50,15 +50,15 @@ fetch(apiURL)
   .then((data) => {
     const products = data.products.slice(0, 4);
     products.forEach((product) => {
-      const container = document.querySelector(".laptop-column1");
+      const container = document.querySelector(".laptop-column1") as HTMLDivElement;
       if (container) {
-        const laprow = document.createElement("div");
+        const laprow = document.createElement("div") as HTMLDivElement;
         laprow.classList.add("lap1");
 
-        const lapimage = document.createElement("img");
+        const lapimage = document.createElement("img") as HTMLImageElement;
         lapimage.src = product.thumbnail;
 
-        const anchor = document.createElement("a");
+        const anchor = document.createElement("a") as HTMLAnchorElement;
         anchor.classList.add("laptop-link");
         anchor.href = "#";
         anchor.textContent = product.title;
