@@ -133,10 +133,13 @@
   overflow: hidden;
   flex: 1;
   border-radius: 20px;
-  /* border: 1px solid black; */
-  margin-bottom: 20px;
   box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
-  background-color: #f6f6f8;
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+}
+.row1:not(:last-child) {
+  margin-bottom: 20px;
 }
 .row2 {
   overflow: hidden;
@@ -157,7 +160,21 @@ video {
   /* width: 100%; */
   height: 100%;
   object-fit: scale-down;
+  float: left;
+  max-width: 45%;
+  margin-right: 20px; /* Adjust as needed */
+  flex: 1;
 }
+.row-anchor {
+  flex: 1;
+  text-align: center;
+  color: rgb(80, 80, 242);
+  text-decoration: none;
+}
+.row-anchor:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
 #lap-txt {
   top: 30px;
   right: 70px;
@@ -200,20 +217,29 @@ video {
 }
 .lap1 {
   /* flex: 1; */
-  /* border: 1px solid black; */
+  position: relative;
   overflow: hidden;
   box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.16);
   border-radius: 20px;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
-  /* padding: 20px; */
+  background-color: #ffffff;
   font-size: 30px;
   text-align: center;
+  line-height: 0.5;
 }
 .lap1 img {
-  min-height: 100%;
+  line-height: 0.5;
+  max-height: 75%;
+  max-width: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: scale-down;
+}
+.lap1 a {
+  align-items: center;
+  margin: 0; /* Set margin to zero */
+  padding: 0;
 }
 .lap2 {
   /* flex: 1; */
@@ -277,4 +303,15 @@ video {
 }
 .laptop-column2 {
   background-color: #f3f2f3;
+}
+.laptop-link {
+  flex: 1;
+  text-align: center;
+  color: rgb(80, 80, 242);
+  text-decoration: none;
+  font-size: medium;
+}
+
+.laptop-link :hover {
+  text-decoration: underline;
 }
