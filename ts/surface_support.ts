@@ -7,12 +7,12 @@ fetch(apiURL)
     if (!response.ok) {
       throw new Error("Failed to fetch data");
     }
-    return response.json();
+    return response.json() as Promise<Data>;
   })
   .then((data: { products: { thumbnail: string; title: string }[] }) => {
     const products = data.products.slice(0, 7); // Limit to 7 images
     const container = document.getElementById("dynamicDivsContainer") as HTMLDivElement;
-    let row = document.createElement("div");
+    let row = document.createElement("div") as HTMLDivElement;
     row.classList.add("row1");
 
     products.forEach((product, index) => {
@@ -28,7 +28,7 @@ fetch(apiURL)
 
         // Create a new row for the next set of images
         if (index !== products.length - 1) {
-          row = document.createElement("div");
+          row = document.createElement("div") as HTMLDivElement;
           row.classList.add("row1");
         }
       }
@@ -45,12 +45,12 @@ fetch(apiResponse)
     if (!response.ok) {
       throw new Error("Failed to fetch data");
     }
-    return response.json();
+    return response.json() as Promise<Data>;
   })
   .then((data: { products: { thumbnail: string; title: string }[] }) => {
     const products = data.products.slice(0, 7); // Limit to 7 images
     const container = document.getElementById("dynamicDivsContainerMid") as HTMLDivElement;
-    let row = document.createElement("div");
+    let row = document.createElement("div") as HTMLDivElement;
     row.classList.add("row1");
 
     products.forEach((product, index) => {
@@ -66,7 +66,7 @@ fetch(apiResponse)
 
         // Create a new row for the next set of images
         if (index !== products.length - 1) {
-          row = document.createElement("div");
+          row = document.createElement("div") as HTMLDivElement;
           row.classList.add("row1");
         }
       }
@@ -78,13 +78,13 @@ fetch(apiResponse)
 
 // Function to create an image container
 function createImageContainer(imageUrl: string, title: string): HTMLDivElement {
-  const imageContainer = document.createElement("div");
+  const imageContainer = document.createElement("div") as HTMLDivElement;
   imageContainer.classList.add("image-container");
 
-  const image = document.createElement("img");
+  const image = document.createElement("img") as HTMLImageElement;
   image.src = imageUrl;
 
-  const titleElement = document.createElement("a");
+  const titleElement = document.createElement("a") as HTMLAnchorElement;
   titleElement.textContent = title;
   titleElement.href = "#";
 

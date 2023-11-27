@@ -27,10 +27,10 @@ fetch(apiURL)
 
 
       const anchor = document.createElement("a") as HTMLAnchorElement;
-      anchor.href = product.redirect;
+      anchor.href = "#";
       anchor.classList.add("buy");
       anchor.textContent="Buy Online"
-      console.log(product.redirect);
+      // console.log(product.redirect);
 
       subdiv.appendChild(image);
       subdiv.appendChild(subtxt);
