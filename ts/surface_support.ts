@@ -1,5 +1,4 @@
-import { Data, Product } from "../types/surface_support";
-
+import { Data,Product } from "../types/surface_support";
 const apiURL: string = "https://mocki.io/v1/81027dee-fbf7-422f-8463-4dc647e0e5ff";
 
 // Fetch data from the API
@@ -10,34 +9,32 @@ fetch(apiURL)
     }
     return response.json();
   })
-  .then((data: { products: Array<{ thumbnail: string; title: string }> }) => {
+  .then((data: { products: { thumbnail: string; title: string }[] }) => {
     const products = data.products.slice(0, 7); // Limit to 7 images
-    const container = document.getElementById("dynamicDivsContainer");
-    if (container) {
-      let row = document.createElement("div");
-      row.classList.add("row1");
+    const container = document.getElementById("dynamicDivsContainer") as HTMLDivElement;
+    let row = document.createElement("div");
+    row.classList.add("row1");
 
-      products.forEach((product, index) => {
-        const imageContainer = createImageContainer(
-          product.thumbnail,
-          product.title
-        );
-        row.appendChild(imageContainer);
+    products.forEach((product, index) => {
+      const imageContainer = createImageContainer(
+        product.thumbnail,
+        product.title
+      );
+      row.appendChild(imageContainer);
 
-        // If 4 images have been added or it's the last image, create a new row
-        if ((index + 1) % 4 === 0 || index === products.length - 1) {
-          container.appendChild(row);
+      // If 4 images have been added or it's the last image, create a new row
+      if ((index + 1) % 4 === 0 || index === products.length - 1) {
+        container.appendChild(row);
 
-          // Create a new row for the next set of images
-          if (index !== products.length - 1) {
-            row = document.createElement("div");
-            row.classList.add("row1");
-          }
+        // Create a new row for the next set of images
+        if (index !== products.length - 1) {
+          row = document.createElement("div");
+          row.classList.add("row1");
         }
-      });
-    }
+      }
+    });
   })
-  .catch((error: Error) => {
+  .catch((error) => {
     console.error(error.message);
   });
 
@@ -50,46 +47,44 @@ fetch(apiResponse)
     }
     return response.json();
   })
-  .then((data: { products: Array<{ thumbnail: string; title: string }> }) => {
-    const container = document.getElementById("dynamicDivsContainerMid");
-    if (container) {
-      const products = data.products.slice(0, 7); // Limit to 7 images
-      let row = document.createElement("div");
-      row.classList.add("row1");
+  .then((data: { products: { thumbnail: string; title: string }[] }) => {
+    const products = data.products.slice(0, 7); // Limit to 7 images
+    const container = document.getElementById("dynamicDivsContainerMid") as HTMLDivElement;
+    let row = document.createElement("div");
+    row.classList.add("row1");
 
-      products.forEach((product, index) => {
-        const imageContainer = createImageContainer(
-          product.thumbnail,
-          product.title
-        );
-        row.appendChild(imageContainer);
+    products.forEach((product, index) => {
+      const imageContainer = createImageContainer(
+        product.thumbnail,
+        product.title
+      );
+      row.appendChild(imageContainer);
 
-        // If 4 images have been added or it's the last image, create a new row
-        if ((index + 1) % 4 === 0 || index === products.length - 1) {
-          container.appendChild(row);
+      // If 4 images have been added or it's the last image, create a new row
+      if ((index + 1) % 4 === 0 || index === products.length - 1) {
+        container.appendChild(row);
 
-          // Create a new row for the next set of images
-          if (index !== products.length - 1) {
-            row = document.createElement("div");
-            row.classList.add("row1");
-          }
+        // Create a new row for the next set of images
+        if (index !== products.length - 1) {
+          row = document.createElement("div");
+          row.classList.add("row1");
         }
-      });
-    }
+      }
+    });
   })
-  .catch((error: Error) => {
+  .catch((error) => {
     console.error(error.message);
   });
 
 // Function to create an image container
 function createImageContainer(imageUrl: string, title: string): HTMLDivElement {
-  const imageContainer: HTMLDivElement = document.createElement("div");
-  imageContainer.classList.add("image-container col-");
+  const imageContainer = document.createElement("div");
+  imageContainer.classList.add("image-container");
 
-  const image: HTMLImageElement = document.createElement("img");
+  const image = document.createElement("img");
   image.src = imageUrl;
 
-  const titleElement: HTMLAnchorElement = document.createElement("a");
+  const titleElement = document.createElement("a");
   titleElement.textContent = title;
   titleElement.href = "#";
 
@@ -110,4 +105,3 @@ function performSearch(): void {
   // Redirect the user to the search page
   window.location.href = searchURL;
 }
-
